@@ -1,0 +1,154 @@
+h1{
+    text-align: center;
+    color: black;
+    font-size: 80px;
+    margin: 0px;
+    background-color: burlywood;
+
+}
+ul.navigation{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-align: center;
+    overflow: hidden;
+    background-color: grey;
+}
+li{
+    display: inline;
+    float: left;
+    border-right: 1px solid white;
+}
+
+li a{
+    display: block;
+    padding: 11px 201px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+li a:hover{
+    background-color: darkgray;
+    text-decoration: none;
+}
+
+p.team{
+    position: relative;
+    right: 30px;
+    font-size: 40px;
+    margin: 0px;
+    
+}
+p.description{
+    position:relative;
+    right: 15px;
+    font-size: 24px;
+}
+
+span{
+    font-size: 60px;
+    position: relative;
+    right: 30px;
+}
+div.weare{
+    height: 750px;
+    width:225px;
+    border: 5px;
+    padding:50px;
+    margin:0px;
+    background-color:blanchedalmond;
+
+}
+
+
+
+div.recent{
+    position: absolute;
+    border: 5px;
+    left:1567px;
+    height: 750px;
+    width: 225px;
+    bottom: -26px;
+    padding:50px;
+    margin: 0px;
+    background-color:blanchedalmond;
+         
+}
+
+p.Rec{
+    position:relative;
+    font-size: 60px;
+    bottom: 60px;
+}
+p.Information{
+    position: relative;
+    bottom: 50px;
+    right: 15px;
+    font-size: 24px;
+    left: -10px;
+}
+
+
+
+
+p.Image_subtitles{
+    position:absolute;
+    left:860px;
+    top:700px;
+    font-size: 50px;
+}
+
+img{
+    position:absolute;
+    top: 200px;
+    left: 600px;
+    width: 700px;
+    height: 500px;
+    animation-name: imagecycle;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+
+    
+}
+
+div.MRCOD{
+    opacity: 1.0;
+    animation-name: mrcod;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+div.happyman{
+    position: absolute;
+    top: 0px;
+    right: 1900px;
+    opacity: 0.0;
+    animation-name: man;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes mrcod{
+    0%  {opacity: 1.0;}
+    50% {opacity: 0.0;}
+    100% {opacity: 1.0;}
+    
+}
+@keyframes man{
+    0%  {opacity: 0.0;}
+    50% {opacity: 1.0;}
+    100% {opacity: 0.0;}
+    
+}
+
+
+
+
+
+
+
+
+
+
+    

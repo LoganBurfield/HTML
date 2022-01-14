@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+        <link rel= "StyleSheet" href="css/style.css">
+        </head>
+            <body>
+            <h1 class = "MR.COD">MR.COD Website</h1>
+                <form action="/api/runs" method="POST">
+
+                    <label>Team Name</label> 
+                    <input type="text" name="team_name" value="" id=1/>
+
+                    <label>Team Number</label> 
+                    <input type="text" name="team_number" value="" id=2/>
+                    
+                    <p>Was the duck or team scoring element delivered via carosuel?</p>
+                    <input type="radio" name="detect" value="duck" id=option8a>
+                    <label>Duck</label>
+                    <input type="radio" name="detect" value="tse" id=option8b>
+                    <label>Scoring Element</label>
+                    <input type="radio" name="detect" value="neither" id=option8c>
+                    <label>Neither</label>
+                    <input type="radio" name="detect" value="both" id=option8d>
+                    <label>Both</label>
+
+                    <input type="submit" value="Submit Run">
+
+                </form>
+                <br>
+                <a href ="/api/runs">Visit API</a>
+                </br>
+            </body>
+    </html>

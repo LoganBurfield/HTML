@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+    <html>
+        <link rel= "StyleSheet" href="css/style.css">
+        <h1 class = "MR.COD">MR.COD Website</h1>
+            <body>
+                <head>
+                
+                
+                  <h2>Autonomous Mode</h2>
+                
+                  <form oninput="res.value=parseInt(a.value)+parseInt(b.value)+parseInt(c.value)+parseInt(d.value)+parseInt(e.value)+parseInt(f.value)+parseInt(g.value)+parseInt(k.value)+parseInt(l.value)+parseInt(m.value)+parseInt(n.value)+parseInt(o.value)+parseInt((h.value)*2)+parseInt((i.value)*4)+parseInt((j.value)*6);">
+                
+                  <p>Were you parked in the alliance storage unit?</p>
+                    <input type="radio" name="a" value=6 id="option1a">
+                    <label>Fully</label>
+                    <input type="radio" name="a" value=3 id="option1b">
+                    <label>Partially</label>
+                    <input type="radio" name="a" value=0 id="option1c">
+                    <label >No</label>
+                
+                  <p>Were you parked in the warehouse?</p>
+                    <input type="radio" name="b" value=10 id=option2a>
+                    <label>Fully</label>
+                    <input type="radio" name="b" value=5 id="option2b">
+                    <label>Partially</label>
+                    <input type="radio" name="b" value=0 id="option2c">
+                    <label>No</label>
+                
+                  <p>Was the freight completely parked in the alliance storage unit?</p>
+                    <input type="radio" name="c" value=2 id=option3a>
+                    <label>Yes</label>
+                    <input type="radio" name="c" value=0 id=option3b>
+                    <label>No</label>
+                
+                  <p>Was the freight completely on the alliance shipping hub?</p>
+                    <input type="radio" name="d" value=6 id=option4a>
+                    <label>Yes</label>
+                    <input type="radio" name="d" value=0 id=option4b>
+                    <label>No</label>
+                
+                    <p>Did you use the duck or the team scoring element to detect shipping level?</p>
+                    <input type="radio" name="e" value=10 id=option5a>
+                    <label>Duck</label>
+                    <input type="radio" name="e" value=20 id=option5b>
+                    <label>Scoring Element</label>
+                    <input type="radio" name="e" value=0 id=option5c>
+                    <label>Didn't detect shipping level</label>
+                
+                    
+                    <h2>Driver Controlled</h2>
+                
+                
+                    <p>Was the freight completely in the alliance storage unit?</p>
+                    <input type="radio" name="f" value=1 id=option6a>
+                    <label>Yes</label>
+                    <input type="radio" name="f" value=0 id=option6b>
+                    <label>No</label>
+                
+                  <p>Was the freight completely on the shared shipping hub?</p>
+                    <input type="radio" name="g" value=4 id=option7a>
+                    <label>Yes</label>
+                    <input type="radio" name="g" value=0 id=option7b>
+                    <label>No</label>
+                
+                    <html>
+                        <head>
+                          <h2>Freight Levels</h2>
+                        </head>
+                        <body>
+                      
+                            <label>How many items did you get on the first level?</label> 
+                            <input type="numbers" name="h" value= "" id=a /><br>
+                            <br/>
+                            <label>How many items did you get on the second level?</label>
+                            <input type="numbers" name="i" value="" id=b /><br>
+                            <br>
+                            <label>How many items did you get on the third level?</label>
+                            <input type="numbers" name="j" value="" id=c /><br>
+                            <br/>
+                
+                        </body>
+                      </html>
+                
+                    <h2>End Game</h2>
+                
+                
+                  <p>Was the duck or team scoring element delivered via carosuel?</p>
+                    <input type="radio" name="k" value=6 id=option8a>
+                    <label>Duck</label>
+                    <input type="radio" name="k" value=6 id=option8b>
+                    <label>Scoring Element</label>
+                    <input type="radio" name="k" value=0 id=option8c>
+                    <label>Neither</label>
+                
+                  <p>Which side was the shared hub tipped to?</p>
+                    <input type="radio" name="l" value=20 id=option9a>
+                    <label>Tipped towards alliance</label>
+                    <input type="radio" name="l" value=0 id=option9b>
+                    <label>Not tipped towards alliance</label>
+                
+                  <p>Was the alliance shipping hub balanced?</p>
+                    <input type="radio" name="m" value=10 id=option10a>
+                    <label>Yes</label>
+                    <input type="radio" name="m" value=0 id=option10b>
+                    <label>No</label>
+                
+                    <p>Were you parked in a warehouse?</p>
+                    <input type="radio" name="n" value=6 id=option11a>
+                    <label>Fully</label>
+                    <input type="radio" name="n" value=3 id=option11b>
+                    <label>Partially</label>
+                    <input type="radio" name="n" value=0 id=option11c>
+                    <label>No</label>
+                
+                    <p>Was the alliance shipping hub capped?</p>
+                    <input type="radio" name="o" value=15 id=option12a>
+                    <label>Yes</label>
+                    <input type="radio" name="o" value=0 id=option12b>
+                    <label>No</label>
+                
+                    <br>
+                  <br>
+                  <form onsubmit="Total_Points" oninput="amount.value = parseInt(a.value)+parseInt(b.value)+parseInt(c.value)+parseInt(d.value)+parseInt(e.value)+parseInt(f.value)+parseInt(g.value)+parseInt(k.value)+parseInt(l.value)+parseInt(m.value)+parseInt(n.value)+parseInt(o.value)+parseInt((h.value)*2)+parseInt((i.value)*4)+parseInt((j.value)*6);">
+                    Total points:<output name="res"></output>
+                </form>
+                    </head>
+                
+                  <body>
+                
+                <html>
