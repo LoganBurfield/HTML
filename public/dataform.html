@@ -8,20 +8,37 @@
                 <form action="/api/runs" method="POST">
 
                     <label>Team Name</label> 
-                    <input type="text" name="team_name" value="" id=1/>
+                    <input type="text" name="team_name" value="" id=1a/>
 
                     <label>Team Number</label> 
-                    <input type="text" name="team_number" value="" id=2/>
+                    <input type="text" name="team_number" value="" id=1b/>
                     
-                    <p>Was the duck or team scoring element delivered via carosuel?</p>
-                    <input type="radio" name="detect" value="duck" id=option8a>
+                    <p>Detected duck/TSE and dumped in shipping hub?</p>
+                    <input type="radio" name="detect" value="duck" id=2a>
                     <label>Duck</label>
-                    <input type="radio" name="detect" value="tse" id=option8b>
-                    <label>Scoring Element</label>
-                    <input type="radio" name="detect" value="neither" id=option8c>
+                    <input type="radio" name="detect" value="tse" id=2b>
+                    <label>TSE</label>
+                    <input type="radio" name="detect" value="neither" id=2c>
                     <label>Neither</label>
-                    <input type="radio" name="detect" value="both" id=option8d>
+                    <input type="radio" name="detect" value="both" id=2d>
                     <label>Both</label>
+
+                    <p>Parked in the alliance storage unit?</p>
+                    <input type="radio" name="alliance_park" value="fully" id="3a">
+                    <label>Fully</label>
+                    <input type="radio" name="alliance_park" value="partially" id="3b">
+                    <label>Partially</label>
+                    <input type="radio" name="alliance_park" value="no" id="3c">
+                    <label >No</label>
+
+                    <p>Parked in the warehouse?</p>
+                    <input type="radio" name="warehouse_park" value="fully" id="4a">
+                    <label>Fully</label>
+                    <input type="radio" name="warehouse_park" value="partially" id="4b">
+                    <label>Partially</label>
+                    <input type="radio" name="warehouse_park" value="no" id="4c">
+                    <label >No</label>
+
 
                     <input type="submit" value="Submit Run">
 

@@ -46,7 +46,8 @@ router.post('/', (req, res) => {
         team_number: req.body.team_number,
         points: '0',
         barrier: 'yes',
-        detect: req.body.detect
+        detect: req.body.detect,
+        alliance_park: req.body.alliance_park
     }
 
     if(!newRun.team_name || !newRun.team_number) {
