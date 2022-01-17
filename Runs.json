@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "team_name": "Team One",
+    "team_number": "111111",
+    "points": "15",
+    "barrier": "yes",
+    "detect": "duck"
+  },
+  {
+    "id": 2,
+    "team_name": "Team Two",
+    "team_number": "222222",
+    "points": "30",
+    "barrier": "no",
+    "detect": "tse"
+  },
+  {
+    "id": 3,
+    "team_name": "Team Three",
+    "team_number": "333333",
+    "points": "45",
+    "barrier": "yes",
+    "detect": "both"
+  },
+  {
+    "id": "a562a53a-cf1b-42d6-8f5a-80f9bad20e88",
+    "team_name": "Example Team",
+    "team_number": "000000",
+    "points": "0",
+    "barrier": "yes",
+    "detect": "both"
+  },
+  {
+    "id": "2fd4ce5d-6340-4c3e-91a9-e42cbb1a6745",
+    "team_name": "Example Team",
+    "team_number": "000000",
+    "points": "0",
+    "barrier": "yes",
+    "detect": "both"
+  },
+  {
+    "id": "2609251e-ccb6-4ae1-8abb-cac963e027ee",
+    "team_name": "Example Team",
+    "team_number": "000000",
+    "points": "0",
+    "barrier": "yes",
+    "detect": "neither"
+  },
+  {
+    "id": "3496697c-5861-4a99-9151-ff3ec51885b5",
+    "team_name": "adgkjskhl;",
+    "team_number": "9798987",
+    "points": "0",
+    "barrier": "yes",
+    "detect": "both"
+  },
+  {
+    "id": "f4eaea0a-c010-40e1-9a15-c5c20192d083",
+    "team_name": "Example Team",
+    "team_number": "00000",
+    "points": "0",
+    "barrier": "yes"
+  }
+]

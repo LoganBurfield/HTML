@@ -1,18 +1,31 @@
 const express = require('express');
 const uuid = require('uuid');
 const json2csv = require ('json2csv');
+const fs = require('fs');
 const router = express.Router();
 const runs = require('../../Runs');
 
 // Gets all runs
 router.get('/', (req, res) => { 
     //res.json(runs)); 
+    //res.format({
+    //    'text/plain': function () {
+    //        res.send(json2csv.parse(runs))
+    //    }
+    //  })
+    //});
+    try {
+        const jsonString = fs.readFileSync ('./Runs.json', 'utf-8');
+        runs2 = JSON.parse(jsonString);
+    }   catch (err) {
+        console.log(err);
+    } 
     res.format({
         'text/plain': function () {
             res.send(json2csv.parse(runs))
-        }
-    })
-});
+            }
+        })
+    });
 
 // Get single run
 router.get('/:id', (req, res) => {
@@ -39,9 +52,22 @@ router.post('/', (req, res) => {
     if(!newRun.team_name || !newRun.team_number) {
         return res.status(400).json({ msg: 'Please enter your team name and number.' });
     }
+    try {
+        const jsonString = fs.readFileSync ('./Runs.json', 'utf-8');
+        runs2 = JSON.parse(jsonString);
+    }   catch (err) {
+        console.log(err);
+    }
+    runs2.push(newRun)
 
-    runs.push(newRun);
-    res.json(runs);
+    fs.writeFile('./Runs.json', JSON.stringify(runs2, null, 2), err => {
+        if (err) {
+            console.log(err);
+        } else {
+            console.log('File successfully written');
+        }
+    })
+    res.redirect('/form.html');
 });
 
 // Update Run
