@@ -8,23 +8,5 @@
     "detect": "duck",
     "alliance_park": "fully",
     "warehouse_park": "partially"
-  },
-  {
-    "id": "92b4cfac-e364-4bdc-8072-d3be3b0fa97b",
-    "team_name": "example team",
-    "team_number": "999999",
-    "points": "0",
-    "barrier": "yes",
-    "detect": "both",
-    "alliance_park": "partially"
-  },
-  {
-    "id": "1b1f25b7-36b4-4c2e-ad93-f45601880719",
-    "team_name": "team",
-    "team_number": "23856234",
-    "points": "0",
-    "barrier": "yes",
-    "detect": "duck",
-    "alliance_park": "no"
   }
 ]
