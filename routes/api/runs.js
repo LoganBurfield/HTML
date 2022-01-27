@@ -22,7 +22,7 @@ router.get('/', (req, res) => {
     } 
     res.format({
         'text/plain': function () {
-            res.send(json2csv.parse(runs))
+            res.send(json2csv.parse(runs2))
             }
         })
     });
@@ -68,7 +68,7 @@ router.post('/', (req, res) => {
             console.log('File successfully written');
         }
     })
-    res.redirect('/form.html');
+    res.redirect('/api/runs');
 });
 
 // Update Run
