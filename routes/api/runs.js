@@ -45,9 +45,18 @@ router.post('/', (req, res) => {
         team_name: req.body.team_name,
         team_number: req.body.team_number,
         points: '0',
-        barrier: 'yes',
         detect: req.body.detect,
-        alliance_park: req.body.alliance_park
+        alliance_park_auto: req.body.alliance_park_auto,
+        warehouse_park_auto: req.body.warehouse_park_auto,
+        spin_carousel: req.body.spin_carousel,
+        pick_up: req.body.pick_up,
+        deliver_element: req.body.deliver_element,
+        barrier: req.body.barrier,
+        ducks: req.body.ducks,
+        alliance_park_end: req.body.alliance_park_end,
+        warehouse_park_end: req.body.warehouse_park_end,
+        tse: req.body.tse,
+        tse_other_team: req.body.tse_other_team
     }
 
     if(!newRun.team_name || !newRun.team_number) {

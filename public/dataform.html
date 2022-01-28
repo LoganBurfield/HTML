@@ -7,12 +7,20 @@
             <h1 class = "MR.COD">MR.COD Website</h1>
                 <form action="/api/runs" method="POST">
 
-                    <label>Team Name</label> 
+    
+                    <h2>Team Information</h2>
+
+
+                    <label>Team Name:</label> 
                     <input type="text" name="team_name" value="" id=1a/>
 
-                    <label>Team Number</label> 
+                    <label>Team Number:</label> 
                     <input type="text" name="team_number" value="" id=1b/>
+
+
+                    <h2>Autonomous Mode</h2>
                     
+
                     <p>Detected duck/TSE and dumped in shipping hub?</p>
                     <input type="radio" name="detect" value="duck" id=2a>
                     <label>Duck</label>
@@ -24,20 +32,84 @@
                     <label>Both</label>
 
                     <p>Parked in the alliance storage unit?</p>
-                    <input type="radio" name="alliance_park" value="fully" id="3a">
+                    <input type="radio" name="alliance_park_auto" value="fully" id="3a">
                     <label>Fully</label>
-                    <input type="radio" name="alliance_park" value="partially" id="3b">
+                    <input type="radio" name="alliance_park_auto" value="partially" id="3b">
                     <label>Partially</label>
-                    <input type="radio" name="alliance_park" value="no" id="3c">
+                    <input type="radio" name="alliance_park_auto" value="no" id="3c">
                     <label >No</label>
 
                     <p>Parked in the warehouse?</p>
-                    <input type="radio" name="warehouse_park" value="fully" id="4a">
+                    <input type="radio" name="warehouse_park_auto" value="fully" id="4a">
                     <label>Fully</label>
-                    <input type="radio" name="warehouse_park" value="partially" id="4b">
+                    <input type="radio" name="warehouse_park_auto" value="partially" id="4b">
                     <label>Partially</label>
-                    <input type="radio" name="warehouse_park" value="no" id="4c">
+                    <input type="radio" name="warehouse_park_auto" value="no" id="4c">
                     <label >No</label>
+
+                    <p>Can spin carousel in alliance storage?</p>
+                    <input type="radio" name="spin_carousel" value="yes" id="5a">
+                    <label>Yes</label>
+                    <input type="radio" name="spin_carousel" value="no" id="5b">
+                    <label>No</label>
+
+
+                    <h2>Driver Controlled</h2>
+
+
+                    <p>Can pick up elements?</p>
+                    <input type="radio" name="pick_up" value="yes" id="6a">
+                    <label>Yes</label>
+                    <input type="radio" name="pick_up" value="no" id="6b">
+                    <label>No</label>
+
+                    <p>Delivered elements in shipping hub?</p>
+                    <input type="radio" name="deliver_element" value="yes" id="7a">
+                    <label>Yes</label>
+                    <input type="radio" name="deliver_element" value="no" id="7b">
+                    <label>No</label>
+
+                    <p>Can go over barrier?</p>
+                    <input type="radio" name="barrier" value="yes" id="8a">
+                    <label>Yes</label>
+                    <input type="radio" name="barrier" value="no" id="8b">
+                    <label>No</label>
+
+
+                    <h2>End Game</h2>
+
+
+                    <label>Ducks delivered:</label> 
+                    <input type="numbers" name="ducks" value= "" id=9a />
+                    
+                    <p>Parked in the alliance storage unit?</p>
+                    <input type="radio" name="alliance_park_end" value="fully" id="10a">
+                    <label>Fully</label>
+                    <input type="radio" name="alliance_park_end" value="partially" id="10b">
+                    <label>Partially</label>
+                    <input type="radio" name="alliance_park_end" value="no" id="10c">
+                    <label >No</label>
+
+                    <p>Parked in the warehouse?</p>
+                    <input type="radio" name="warehouse_park_end" value="fully" id="11a">
+                    <label>Fully</label>
+                    <input type="radio" name="warehouse_park_end" value="partially" id="11b">
+                    <label>Partially</label>
+                    <input type="radio" name="warehouse_park_end" value="no" id="11c">
+                    <label >No</label>
+
+                    <p>Put TSE on top of shipping hub?</p>
+                    <input type="radio" name="tse" value="yes" id="12a">
+                    <label>Yes</label>
+                    <input type="radio" name="tse" value="no" id="12b">
+                    <label>No</label>
+
+                    <p>Other team can stack TSE?</p>
+                    <input type="radio" name="tse_other_team" value="yes" id="13a">
+                    <label>Yes</label>
+                    <input type="radio" name="tse_other_team" value="no" id="13b">
+                    <label>No</label>
+
 
 
                     <input type="submit" value="Submit Run">
