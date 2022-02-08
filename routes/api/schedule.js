@@ -3,38 +3,38 @@ const uuid = require('uuid');
 const json2csv = require ('json2csv');
 const fs = require('fs');
 const router = express.Router();
-const runs = require('../../Runs');
+const schedule = require('../../Schedule');
 
-// Gets all runs
+// Gets all matches
 router.get('/', (req, res) => { 
     //res.json(runs)); 
     //res.format({
     //    'text/plain': function () {
-    //        res.send(json2csv.parse(runs))
+    //        res.send(json2csv.parse(schedule))
     //    }
     //  })
     //});
     try {
-        const jsonString = fs.readFileSync ('./Runs.json', 'utf-8');
-        runs2 = JSON.parse(jsonString);
+        const jsonString = fs.readFileSync ('./Schedule.json', 'utf-8');
+        schedule2 = JSON.parse(jsonString);
     }   catch (err) {
         console.log(err);
     } 
     res.format({
         'text/plain': function () {
-            res.send(json2csv.parse(runs2))
+            res.send(json2csv.parse(schedule2))
             }
         })
     });
 
-// Get single run
-router.get('/:id', (req, res) => {
-    const found = runs.some(run => run.id === parseInt(req.params.id));
+// Get single match
+router.get('/:match', (req, res) => {
+    const found = schedule.some(event => event.match === parseInt(req.params.match));
 
     if (found) {
-    res.json(runs.filter(run => run.id === parseInt(req.params.id)));
+    res.json(schedule.filter(event => event.match === parseInt(req.params.match)));
     } else {
-        res.status(400).json({ msg: `No run found with the id of ${req.params.id}` });
+        res.status(400).json({ msg: `No match found with the id of ${req.params.match}` });
     }
 });
 
