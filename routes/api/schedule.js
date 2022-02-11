@@ -38,54 +38,45 @@ router.get('/:match', (req, res) => {
     }
 });
 
-// Create Run
+// Create Match
 router.post('/', (req, res) => {
-    const newRun = {
-        id: uuid.v4(),
-        team_name: req.body.team_name,
-        team_number: req.body.team_number,
-        points: '0',
-        detect: req.body.detect,
-        alliance_park_auto: req.body.alliance_park_auto,
-        warehouse_park_auto: req.body.warehouse_park_auto,
-        spin_carousel: req.body.spin_carousel,
-        pick_up: req.body.pick_up,
-        deliver_element: req.body.deliver_element,
-        barrier: req.body.barrier,
-        ducks: req.body.ducks,
-        alliance_park_end: req.body.alliance_park_end,
-        warehouse_park_end: req.body.warehouse_park_end,
-        tse: req.body.tse,
-        tse_other_team: req.body.tse_other_team
+    const newMatch = {
+        match: req.body.match,
+        blue_1: req.body.blue_1,
+        blue_2: req.body.blue_2,
+        red_1: req.body.red_1,
+        red_2: req.body.red_2,
+        field: req.body.field,
+        tourney_key: req.body.tourney_key
     }
 
-    if(!newRun.team_name || !newRun.team_number) {
+    if(!newMatch.match) {
         return res.status(400).json({ msg: 'Please fill out the entire form before submitting.' });
     }
     try {
-        const jsonString = fs.readFileSync ('./Runs.json', 'utf-8');
-        runs2 = JSON.parse(jsonString);
+        const jsonString = fs.readFileSync ('./Schedule.json', 'utf-8');
+        schedule2 = JSON.parse(jsonString);
     }   catch (err) {
         console.log(err);
     }
-    runs2.push(newRun)
+    schedule2.push(newMatch)
 
-    fs.writeFile('./Runs.json', JSON.stringify(runs2, null, 2), err => {
+    fs.writeFile('./Schedule.json', JSON.stringify(schedule2, null, 2), err => {
         if (err) {
             console.log(err);
         } else {
             console.log('File successfully written');
         }
     })
-    res.redirect('/api/runs');
+    res.redirect('/api/schedule');
 });
 
-// Update Run
+// Update Match
 router.put('/:id', (req, res) => {
-    const found = runs.some(run => run.id === parseInt(req.params.id));
+    const found = schedule.some(run => run.id === parseInt(req.params.id));
 
     if (found) {
-        const updRun = req.body;
+        const updMatch = req.body;
         runs.forEach(run => {
             if(run.id === parseInt(req.params.id)) {
             run.team_name = updRun.team_name ? updRun.team_name : run.team_name;
@@ -99,7 +90,7 @@ router.put('/:id', (req, res) => {
     }
 });
 
-// Delete Run
+// Delete Match
 router.delete('/:id', (req, res) => {
     const found = runs.some(run => run.id === parseInt(req.params.id));
 
