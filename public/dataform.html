@@ -26,13 +26,13 @@
                     <label>Dumped in Correct Area</label>
                     <input type="radio" name="detect" value="Dumped" id=2c>
                     <label>Dumped</label>
-                    <input type="radio" name="detect" value="neither" id=2d>
-                    <label>neither</label>
+                    <input type="radio" name="detect" value="neither" id=2d checked="true">
+                    <label>Neither</label>
 
                     <p>Did they spin they carousel?</p>
                     <input type="radio" name="spin_carousel" value="yes" id="5a">
                     <label>Yes</label>
-                    <input type="radio" name="spin_carousel" value="no" id="5b">
+                    <input type="radio" name="spin_carousel" value="no" id="5b" checked="true">
                     <label>No</label>
 
                     <p>Did they park in the alliance storage unit?</p>
@@ -40,7 +40,7 @@
                     <label>Fully</label>
                     <input type="radio" name="alliance_park_auto" value="partially" id="3b">
                     <label>Partially</label>
-                    <input type="radio" name="alliance_park_auto" value="no" id="3c">
+                    <input type="radio" name="alliance_park_auto" value="no" id="3c" checked="true">
                     <label >No</label>
 
                     <p>Did they park in the warehouse?</p>
@@ -48,7 +48,7 @@
                     <label>Fully</label>
                     <input type="radio" name="warehouse_park_auto" value="partially" id="4b">
                     <label>Partially</label>
-                    <input type="radio" name="warehouse_park_auto" value="no" id="4c">
+                    <input type="radio" name="warehouse_park_auto" value="no" id="4c" checked="true">
                     <label >No</label>
 
 
@@ -58,47 +58,47 @@
                     <p>Did they pick up a game element?</p>
                     <input type="radio" name="pick_up" value="yes" id="6a">
                     <label>Yes</label>
-                    <input type="radio" name="pick_up" value="no" id="6b">
+                    <input type="radio" name="pick_up" value="no" id="6b" checked="true">
                     <label>No</label>
 
                     <p>Did they deliver an element in the alliance shipping hub?</p>
                     <input type="radio" name="deliver_alliance" value="yes" id="7a">
                     <label>Yes</label>
-                    <input type="radio" name="deliver_alliance" value="no" id="7b">
+                    <input type="radio" name="deliver_alliance" value="no" id="7b" checked="true">
                     <label>No</label>
 
                     <p>Did they deliver an element in the shared shipping hub?</p>
                     <input type="radio" name="deliver_shared" value="yes" id="">
                     <label>Yes</label>
-                    <input type="radio" name="deliver_shared" value="no" id="">
+                    <input type="radio" name="deliver_shared" value="no" id="" checked="true">
                     <label>No</label>
 
                     <p>Did they go over the barrier?</p>
                     <input type="radio" name="barrier" value="yes" id="8a">
                     <label>Yes</label>
-                    <input type="radio" name="barrier" value="no" id="8b">
+                    <input type="radio" name="barrier" value="no" id="8b" checked="true">
                     <label>No</label>
 
                     <p>Did they get stuck on the barrier?</p>
                     <input type="radio" name="barrier_stuck" value="yes" id="">
                     <label>Yes</label>
-                    <input type="radio" name="barrier_stuck" value="no" id="">
+                    <input type="radio" name="barrier_stuck" value="no" id="" checked="true">
                     <label>No</label>
 
                     <h2>Endgame</h2>
 
 
                     <label>Ducks delivered:</label> 
-                    <input type="numbers" name="ducks" value= "" id=9a />
+                    <input type="number" name="ducks" value="0" min="0" max="10" style="font-size: 20px;" id="9a" />
 
                     <p>Did they cap the alliance shipping hub with TSE?</p>
                     <input type="radio" name="tse" value="yes" id="12a">
                     <label>Yes</label>
-                    <input type="radio" name="tse" value="no" id="12b">
+                    <input type="radio" name="tse" value="no" id="12b" checked="true">
                     <label>No</label>
 
                     <p>Can/Did the other team still cap their TSE?</p>
-                    <input type="radio" name="tse_other_team" value="yes" id="13a">
+                    <input type="radio" name="tse_other_team" value="yes" id="13a" checked="true">
                     <label>Yes</label>
                     <input type="radio" name="tse_other_team" value="no" id="13b">
                     <label>No</label>
@@ -108,7 +108,7 @@
                     <label>Fully</label>
                     <input type="radio" name="alliance_park_end" value="partially" id="10b">
                     <label>Partially</label>
-                    <input type="radio" name="alliance_park_end" value="no" id="10c">
+                    <input type="radio" name="alliance_park_end" value="no" id="10c" checked="true">
                     <label >No</label>
 
                     <p>Did they park in the warehouse?</p>
@@ -116,12 +116,16 @@
                     <label>Fully</label>
                     <input type="radio" name="warehouse_park_end" value="partially" id="11b">
                     <label>Partially</label>
-                    <input type="radio" name="warehouse_park_end" value="no" id="11c">
+                    <input type="radio" name="warehouse_park_end" value="no" id="11c" checked="true">
                     <label >No</label>
+
+                    <h2 style="margin-bottom: 0px;">Penalty Points</h2>
+                    <p></p>
+                    <input type="number" name="penalties" value="0" min="0" max="120" style="font-size: 20px;"/>
+                    <p></p>
 
                     <h2>Notes</h2>
                     <textarea rows="9" cols="50" name="notes" id=""></textarea>
-
 
                     <p></p>
                     <input type="submit" value="Submit Run">
