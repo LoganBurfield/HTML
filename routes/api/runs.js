@@ -59,6 +59,7 @@ router.post('/', (req, res) => {
         warehouse_park_end: req.body.warehouse_park_end,
         tse: req.body.tse,
         tse_other_team: req.body.tse_other_team,
+        penalty_points: req.body.penalties,
         notes: req.body.notes
     }
 
@@ -80,7 +81,8 @@ router.post('/', (req, res) => {
             console.log('File successfully written');
         }
     })
-    res.redirect('/api/runs');
+    // res.redirect('/api/runs');
+    res.redirect('/dataform.html');
 });
 
 // Update Run
