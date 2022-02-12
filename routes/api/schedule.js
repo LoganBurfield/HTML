@@ -72,32 +72,31 @@ router.post('/', (req, res) => {
 });
 
 // Update Match
-router.put('/:id', (req, res) => {
-    const found = schedule.some(run => run.id === parseInt(req.params.id));
+router.put('/:match', (req, res) => {
+    const found = schedule.some(event => event.match === parseInt(req.params.match));
 
     if (found) {
         const updMatch = req.body;
-        runs.forEach(run => {
-            if(run.id === parseInt(req.params.id)) {
-            run.team_name = updRun.team_name ? updRun.team_name : run.team_name;
-            run.team_number = updRun.team_number ? updRun.team_number : run.team_number;
+        schedule.forEach(event => {
+            if(event.match === parseInt(req.params.match)) {
+            event.match = updMatch.match ? updMatch.match : event.match;
 
-            res.json({ msg: 'Run updated', run });
+            res.json({ msg: 'Match updated', event });
             }
         });
     } else {
-        res.status(400).json({ msg: `No run found with the id of ${req.params.id}` });
+        res.status(400).json({ msg: `No match found with the id of ${req.params.match}` });
     }
 });
 
 // Delete Match
-router.delete('/:id', (req, res) => {
-    const found = runs.some(run => run.id === parseInt(req.params.id));
+router.delete('/:match', (req, res) => {
+    const found = schedule.some(event => event.match === parseInt(req.params.match));
 
     if (found) {
-    res.json({ msg: 'Run deleted', runs: runs.filter(run => run.id !== parseInt(req.params.id))});
+    res.json({ msg: 'Match deleted', event: schedule.filter(event => event.match !== parseInt(req.params.match))});
     } else {
-        res.status(400).json({ msg: `No run found with the id of ${req.params.id}` });
+        res.status(400).json({ msg: `No match found with the id of ${req.params.match}` });
     }
 });
 
