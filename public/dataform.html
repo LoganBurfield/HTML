@@ -22,18 +22,18 @@
                     
 
                     <p>Did they detect duck/TSE and dump in the correct area?</p>
-                    <input type="radio" name="detect" value="Dumped Correctly" id=2a>
-                    <label>Dumped in Correct Area</label>
-                    <input type="radio" name="detect" value="Dumped" id=2c>
-                    <label>Dumped</label>
-                    <input type="radio" name="detect" value="Neither" id=2d checked="true">
-                    <label>Neither</label>
+                    <input type="radio" name="detect" value="dumped_correctly" id="dumped_correctly">
+                    <label for="dumped_correctly">Dumped in Correct Area</label>
+                    <input type="radio" name="detect" value="dumped" id="dumped">
+                    <label for="dumped">Dumped</label>
+                    <input type="radio" name="detect" value="neither" id="neither" checked="true">
+                    <label for="neither">Neither</label>
 
                     <p>Did they spin they carousel?</p>
-                    <input type="radio" name="spin_carousel" value="yes" id="5a">
-                    <label>Yes</label>
-                    <input type="radio" name="spin_carousel" value="no" id="5b" checked="true">
-                    <label>No</label>
+                    <input type="radio" name="spin_carousel" value="yes" id="spun_carousel">
+                    <label for="spun_carousel">Yes</label>
+                    <input type="radio" name="spin_carousel" value="no" id="didnt_spin_carousel" checked="true">
+                    <label for="didnt_spin_carousel">No</label>
 
                     <p>Did they park in the alliance storage unit?</p>
                     <input type="radio" name="alliance_park_auto" value="fully" id="3a">
@@ -55,12 +55,6 @@
                     <h2>Driver Controlled</h2>
 
 
-                    <p>Did they pick up a game element?</p>
-                    <input type="radio" name="pick_up" value="yes" id="6a">
-                    <label>Yes</label>
-                    <input type="radio" name="pick_up" value="no" id="6b" checked="true">
-                    <label>No</label>
-
                     <p>Did they deliver an element in the alliance shipping hub?</p>
                     <input type="radio" name="deliver_alliance" value="yes" id="7a">
                     <label>Yes</label>
@@ -79,18 +73,24 @@
                     <input type="radio" name="barrier" value="no" id="8b" checked="true">
                     <label>No</label>
 
-                    <p>Did they get stuck on the barrier?</p>
-                    <input type="radio" name="barrier_stuck" value="yes" id="">
-                    <label>Yes</label>
-                    <input type="radio" name="barrier_stuck" value="no" id="" checked="true">
-                    <label>No</label>
-
 
                     <h2>Endgame</h2>
 
 
-                    <label>Ducks delivered:</label> 
-                    <input type="number" name="ducks" value="0" min="0" max="10" style="font-size: 20px;" id="9a" />
+                    <label for="ducks">Ducks Delivered:</label>
+                    <select name="ducks" id="ducks" style="font-size: 18px;">
+                        <option value="N/A">N/A</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                      </select>
 
                     <p>Did they cap the alliance shipping hub with TSE?</p>
                     <input type="radio" name="tse" value="yes" id="12a">
