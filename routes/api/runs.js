@@ -78,6 +78,8 @@ router.post('/', (req, res) => {
             console.log('File successfully written');
         }
     })
+
+
     // res.redirect('/api/runs');
     res.redirect('/dataform.html');
 });
