@@ -55,7 +55,19 @@
                     <h2>Driver Controlled</h2>
 
 
-                    <p>Did they deliver an element in the alliance shipping hub?</p>
+                    <label for="deliver_shared">How many game elements did they <br> place on the shared shipping hub<br> in driver control mode?<br></label>
+                    <input type="number" name="deliver_shared" id="deliver_shared" value="0">
+
+                    <p style="margin-bottom: 5px;">How many game elements did they <br> place on the alliance shipping hub <br> in driver control mode?</p>
+                    <label for="alliance_top">Top:</label>
+                    <input type="number" name="alliance_top" id="alliance_top" value="0" min="0" style="margin-bottom: 5px;">
+                    <label for="alliance_middle"><br> Middle:</label>
+                    <input type="number" name="alliance_middle" id="alliance_middle" value="0" min="0" style="margin-bottom: 5px;">
+                    <label for="alliance_bottom"><br> Bottom:</label>
+                    <input type="number" name="alliance_bottom" id="alliance_bottom" value="0" min="0">
+
+
+                    <!-- <p>Did they deliver an element in the alliance shipping hub?</p>
                     <input type="radio" name="deliver_alliance" value="yes" id="7a">
                     <label>Yes</label>
                     <input type="radio" name="deliver_alliance" value="no" id="7b" checked="true">
@@ -65,7 +77,7 @@
                     <input type="radio" name="deliver_shared" value="yes" id="">
                     <label>Yes</label>
                     <input type="radio" name="deliver_shared" value="no" id="" checked="true">
-                    <label>No</label>
+                    <label>No</label> -->
 
                     <p>Did they go over the barrier?</p>
                     <input type="radio" name="barrier" value="yes" id="8a">
@@ -96,12 +108,6 @@
                     <input type="radio" name="tse" value="yes" id="12a">
                     <label>Yes</label>
                     <input type="radio" name="tse" value="no" id="12b" checked="true">
-                    <label>No</label>
-
-                    <p>Can/did the other team still cap their TSE?</p>
-                    <input type="radio" name="tse_other_team" value="yes" id="13a" checked="true">
-                    <label>Yes</label>
-                    <input type="radio" name="tse_other_team" value="no" id="13b">
                     <label>No</label>
                     
                     <p>Did they park in the alliance storage unit?</p>

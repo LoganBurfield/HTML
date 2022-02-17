@@ -49,16 +49,13 @@ router.post('/', (req, res) => {
         alliance_park_auto: req.body.alliance_park_auto,
         warehouse_park_auto: req.body.warehouse_park_auto,
         spin_carousel: req.body.spin_carousel,
-        pick_up: req.body.pick_up,
-        deliver_alliance: req.body.deliver_alliance,
+        deliver_alliance: req.body.alliance_top*6+req.body.alliance_middle*4+req.body.alliance_bottom*2,
         deliver_shared: req.body.deliver_shared,
         barrier: req.body.barrier,
-        stuck_on_barrier: req.body.barrier_stuck,
         ducks: req.body.ducks,
         alliance_park_end: req.body.alliance_park_end,
         warehouse_park_end: req.body.warehouse_park_end,
         tse: req.body.tse,
-        tse_other_team: req.body.tse_other_team,
         penalty_points: req.body.penalties,
         notes: req.body.notes
     }
