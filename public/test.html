@@ -4,24 +4,30 @@
     <title>
         Schedule dropdown testing
     </title>
+    
+    <script type="text/javascript">
+        function moveNumbers()
+        {
+        var no=document.getElementById("no");
+        var option=no.options[no.selectedIndex].text;
+        document.getElementById("result").value=option;
+        }
+        </script>
 </head>
  
 <body>
+    <form>  
     <h1 style="color: green">
         Schedule
-    </h1>
-    <b>
-        How to get selected value in dropdown
-        list using JavaScript?
-    </b>
-     
-<p> Select one from the given options:
-        <select id="select1">
-            <option value="free">Free</option>
-            <option value="basic">Basic</option>
-            <option value="premium">Premium</option>
+    </h1> 
+
+<p> Select a match:
+        <select id="selectmatch" onchange="selectmatch()">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
         </select>
-    </p>
+    </p>    
  
  
      
@@ -34,11 +40,12 @@
      
     <script type="text/javascript">
     function getOption() {
-        selectElement = document.querySelector('#select1');
+        selectElement = document.querySelector('#selectmatch');
         output = selectElement.value;
         document.querySelector('.output').textContent = output;
     }
     </script>
+    </form>
 </body>
  
 </html>
