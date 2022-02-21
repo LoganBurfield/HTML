@@ -2,6 +2,47 @@
 <html lang="en">
 <head>
     <title>Schedule</title>
+
+    <script type="text/javascript">
+function removeAll(s2) {
+    for (var i = s2.options.length - 1; i >= 0; i--) {
+        s2.remove(i);
+    }
+}
+function insertOptions(s1,s2) {
+    var s1 = document.getElementById('s1');
+    var s2 = document.getElementById('s2');
+    if(s1.options[s1.selectedIndex].value == "Laptop") {
+      var opt1 = document.createElement('option');
+      var opt2 = document.createElement('option');
+      opt1.value = "HP";
+      opt2.value = "Dell";
+      opt1.innerHTML = "HP";
+      opt2.innerHTML = "Dell";
+      removeAll(s2);
+      s2.options.add(opt1);
+      s2.options.add(opt2);
+    }
+    else if(s1.options[s1.selectedIndex].value == "Mobile") {
+      var opt1 = document.createElement('option');
+      var opt2 = document.createElement('option');
+      opt1.value = "Redmi";
+      opt2.value = "Samsung";
+      opt1.innerHTML = "Redmi";
+      opt2.innerHTML = "Samsung";
+      removeAll(s2);
+      s2.options.add(opt1);
+      s2.options.add(opt2);
+    }
+    else {
+      var opt1 = document.createElement('option');
+      opt1.value = "--";
+      opt1.innerHTML = "--";
+      removeAll(s2);
+      s2.options.add(opt1);
+    }
+}
+</script>
 </head>
 <body>
   <div class="container mt-4">
