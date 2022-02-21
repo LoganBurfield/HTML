@@ -1,13 +1,69 @@
+{{!-- Everything here is working as it should. --}}
 <h1>{{title}}</h1>
-<h4>Gaspardo Enterprises LLC</h4>
+<h4>This is the schedule tool.</h4>
 <ul class="list-group">
     {{#each match}}
-    <li class="list-group-item">{{this.match}}: {{this.blue_1}}</li>
+    <li class="list-group-item"> Match {{this.match}}: {{this.blue_1}}</li>
     {{/each}}
 </ul>
 
 <select id="selectmatch" onchange="selectmatch()">
     {{#each match}}
-    <option value="{{this.match}}: {{this.blue_1}}">{{this.match}}: {{this.blue_1}}</option>
+    <option value="{{this.match}}: {{this.blue_1}}">Match {{this.match}}: {{this.blue_1}}</option>
     {{/each}}
+</select>
+
+
+<br></br>
+
+
+{{!-- Below is the code that's not functioning properly. --}}
+<script type="text/javascript">
+function removeAll(s2) {
+    for (var i = s2.options.length - l; i >= 0; i--) {
+        s2.remove(i);
+    }
+}
+function insertOptions(s1,s2) {
+    var s1 = document.getElementById('s1');
+    var s2 = document.getElementById('s2');
+    if(s1.options[s1.selectedIndex].value == "Laptop") {
+      var opt1 = document.createElement('option');
+      var opt2 = document.createElement('option');
+      opt1.value = "HP";
+      opt2.value = "Dell";
+      opt1.innerHTML = "HP";
+      opt2.innerHTML = "Dell";
+      removeAll(s2);
+      s2.options.add(opt1);
+      s2.options.add(opt2);
+    }
+    else if(s1.options[s1.selectedIndex].value == "Mobile") {
+      var opt1 = document.createElement('option');
+      var opt2 = document.createElement('option');
+      opt1.value = "Redmi";
+      opt2.value = "Samsung";
+      opt1.innerHTML = "Redmi";
+      opt2.innerHTML = "Samsung";
+      removeAll(s2);
+      s2.options.add(opt1);
+      s2.options.add(opt2);
+    }
+    else {
+      var opt1 = document.createElement('option');
+      opt1.value = "--";
+      opt1.innerHTML = "--";
+      removeAll(s2);
+      s2.options.add(opt1);
+    }
+}
+</script>
+
+<select class="s1" id="s1" onchange="insertOptions('s1', 's2')">
+    <option value="Select">Select</option>
+    <option value="Laptop">Laptop</option>
+    <option value="Mobile">Mobile</option>
+</select>
+<select class="s2" id="s2">
+    <option value="--">--</option>
 </select>
