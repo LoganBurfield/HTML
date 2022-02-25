@@ -35,7 +35,7 @@ function removeAll(s2) {
 function insertOptions(s1,s2) {
     var s1 = document.getElementById('s1');
     var s2 = document.getElementById('s2');
-    if(s1.options[s1.selectedIndex].value == "Laptop") {
+    if(s1.options[s1.selectedIndex].value == "1") {
       var opt1 = document.createElement('option');
       var opt2 = document.createElement('option');
       opt1.value = "HP";
@@ -46,7 +46,7 @@ function insertOptions(s1,s2) {
       s2.options.add(opt1);
       s2.options.add(opt2);
     }
-    else if(s1.options[s1.selectedIndex].value == "Mobile") {
+    else if(s1.options[s1.selectedIndex].value == "2") {
       var opt1 = document.createElement('option');
       var opt2 = document.createElement('option');
       opt1.value = "Redmi";
