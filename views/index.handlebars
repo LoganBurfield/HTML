@@ -16,11 +16,11 @@
 <br></br>
 
 
-
 <select class="s1" id="s1" onchange="insertOptions('s1', 's2')">
     <option value="Select">Select</option>
-    <option value="Laptop">Laptop</option>
-    <option value="Mobile">Mobile</option>
+    {{#each match}}
+    <option value="{{this.match}}">Match {{this.match}}</option>
+    {{/each}}
 </select>
 <select class="s2" id="s2">
     <option value="--">--</option>
