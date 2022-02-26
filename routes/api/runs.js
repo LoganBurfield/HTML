@@ -156,7 +156,7 @@ router.delete('/:id', (req, res) => {
 module.exports = router;
 
 
-/* Saving old version of post request here incase the google method fucks everything up
+/* Saving old version of post request here in case the google method messes everything up
 router.post('/', (req, res) => {
     const newRun = {
         id: uuid.v4(),

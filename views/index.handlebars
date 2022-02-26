@@ -27,6 +27,20 @@
 </select>
 
 <script type="text/javascript">
+
+    try {
+        const jsonString = fs.readFileSync ('./Schedule.json', 'utf-8');
+        schedule = JSON.parse(jsonString);
+    }   catch (err) {
+        console.log(err);
+    } 
+
+/*fetch("./Schedule.json")
+  .then(response => response.json())
+  .then(data => {
+      console.log(data)
+  })*/
+
 function removeAll(s2) {
     for (var i = s2.options.length - 1; i >= 0; i--) {
         s2.remove(i);
