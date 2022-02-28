@@ -20,13 +20,14 @@ app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 
 // Set static folder (***UNCOMMENT AFTER HANDLEBARS TESTING***)
-// app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Scouting Tool  Route
-app.get('/', (req, res) => res.render('index', {
-    title: 'Schedule Tool',
-    match
-}));
+// app.get('/', (req, res) => res.render('index', {
+//     title: 'Schedule Tool',
+//     match
+// }));
+
 
 // Runs API Routes
 app.use('/api/runs', require('./routes/api/runs'));

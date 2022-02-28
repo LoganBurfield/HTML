@@ -15,17 +15,17 @@ router.get('/', (req, res) => {
     //  })
     //});
     try {
-        const jsonString = fs.readFileSync ('./Schedule.json', 'utf-8');
+        const jsonString = fs.readFileSync('./Schedule.json', 'utf-8');
         schedule2 = JSON.parse(jsonString);
-    }   catch (err) {
+    } catch (err) {
         console.log(err);
     } 
     res.format({
         'text/plain': function () {
             res.send(json2csv.parse(schedule2))
-            }
-        })
-    });
+        }
+    })
+});
 
 // Get single match
 router.get('/:match', (req, res) => {

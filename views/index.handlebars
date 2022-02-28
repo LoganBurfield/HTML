@@ -1,3 +1,5 @@
+<p id="demo"></p>
+
 <h1>{{title}}</h1>
 <h4>This is the schedule tool.</h4>
 <ul class="list-group">
@@ -28,18 +30,14 @@
 
 <script type="text/javascript">
 
-    try {
-        const jsonString = fs.readFileSync ('./Schedule.json', 'utf-8');
-        schedule = JSON.parse(jsonString);
-    }   catch (err) {
-        console.log(err);
-    } 
+const xmlhttp = new XMLHttpRequest();
+xmlhttp.onload = function() {
+  const myObj = JSON.parse(this.responseText);
+  document.getElementById("demo").innerHTML = myObj;
+}
+xmlhttp.open("GET", "./api/schedule");
+xmlhttp.send();
 
-/*fetch("./Schedule.json")
-  .then(response => response.json())
-  .then(data => {
-      console.log(data)
-  })*/
 
 function removeAll(s2) {
     for (var i = s2.options.length - 1; i >= 0; i--) {
