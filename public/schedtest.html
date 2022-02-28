@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <select name="matches" id="matches"></select>
+   <script>
+      fetch('./api/schedule')
+         .then((res) => {
+            return res.text();
+         })
+         .then((data) => {
+            matches = JSON.parse(data);
+            matches.forEach((item, index, arr) => {
+               document.getElementById('matches').innerHTML = document.getElementById('matches').innerHTML + `<option value="${index+1}">Match #${index+1}</option>`
+            });
+         })
+   </script>
+</body>
+</html>
