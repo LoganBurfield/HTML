@@ -7,7 +7,11 @@
    <title>Document</title>
 </head>
 <body>
-   <select name="matches" id="matches"></select>
+   <select name="matches" id="matches" onchange="change_myselect(this.value)">
+   <option value="select">Select</option>
+   </select>
+   <select name="teams" id="teams"></select>
+   <p id="p1"></p>
    <script>
       fetch('./api/schedule')
          .then((res) => {
@@ -16,9 +20,29 @@
          .then((data) => {
             matches = JSON.parse(data);
             matches.forEach((item, index, arr) => {
-               document.getElementById('matches').innerHTML = document.getElementById('matches').innerHTML + `<option value="${index+1}">Match #${index+1}</option>`
+               document.getElementById('matches').innerHTML += `<option value="${index}">Match #${index+1}</option>`
             });
          })
+      
+      function change_myselect(sel) {
+         fetch('./api/schedule')
+         .then((res) => {
+            return res.text();
+         })
+         .then((data) => {
+            if(sel !== "select"){
+               matches = JSON.parse(data);
+               // document.getElementById('p1').innerHTML = sel;
+               document.getElementById('teams').innerHTML = 
+                  `<option value="${matches[parseInt(sel)].blue_1}">${matches[sel].blue_1}</option>` + 
+                  `<option value="${matches[parseInt(sel)].blue_2}">${matches[sel].blue_2}</option>` +
+                  `<option value="${matches[parseInt(sel)].red_1}">${matches[sel].red_1}</option>` +
+                  `<option value="${matches[parseInt(sel)].red_2}">${matches[sel].red_2}</option>`;
+            } else {
+               document.getElementById('teams').innerHTML = "";
+            }
+         })
+      }
    </script>
 </body>
 </html>

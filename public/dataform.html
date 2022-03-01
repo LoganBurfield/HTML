@@ -11,11 +11,49 @@
                     <h2>Team Information</h2>
                     
 
-                    <label>Team Name:</label> 
+                    <!-- <label>Team Name:</label> 
                     <input type="text" name="team_name" value="" id="1a" required='required'/>
 
                     <label>Team Number:</label> 
-                    <input type="text" name="team_number" value="" id="1b" required='required'/>
+                    <input type="text" name="team_number" value="" id="1b" required='required'/> -->
+
+                    <select name="matches" id="matches" onchange="change_myselect(this.value)">
+                        <option value="select">Select</option>
+                    </select>
+                    <select name="team" id="teams" required="required"></select>
+
+                    <script>
+                        fetch('./api/schedule')
+                           .then((res) => {
+                              return res.text();
+                           })
+                           .then((data) => {
+                              matches = JSON.parse(data);
+                              matches.forEach((item, index, arr) => {
+                                 document.getElementById('matches').innerHTML += `<option value="${index}">Match #${index+1}</option>`
+                              });
+                           })
+                        
+                        function change_myselect(sel) {
+                           fetch('./api/schedule')
+                           .then((res) => {
+                              return res.text();
+                           })
+                           .then((data) => {
+                              if(sel !== "select"){
+                                 matches = JSON.parse(data);
+                                 // document.getElementById('p1').innerHTML = sel;
+                                 document.getElementById('teams').innerHTML = 
+                                    `<option value="${matches[parseInt(sel)].blue_1}">${matches[sel].blue_1}</option>` + 
+                                    `<option value="${matches[parseInt(sel)].blue_2}">${matches[sel].blue_2}</option>` +
+                                    `<option value="${matches[parseInt(sel)].red_1}">${matches[sel].red_1}</option>` +
+                                    `<option value="${matches[parseInt(sel)].red_2}">${matches[sel].red_2}</option>`;
+                              } else {
+                                 document.getElementById('teams').innerHTML = "";
+                              }
+                           })
+                        }
+                     </script>
 
 
                     <h2>Autonomous Mode</h2>

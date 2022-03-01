@@ -43,8 +43,7 @@ router.get('/:id', (req, res) => {
 router.post('/', async (req, res) => {
     const newRun = {
         id: uuid.v4(),
-        team_name: req.body.team_name,
-        team_number: req.body.team_number,
+        team: req.body.team,
         points: '0',
         detect: req.body.detect,
         alliance_park_auto: req.body.alliance_park_auto,
@@ -113,7 +112,7 @@ router.post('/', async (req, res) => {
         range: "Sheet1!A:P",
         valueInputOption: "USER_ENTERED",
         resource: {
-            values: [[newRun.id, newRun.team_name, newRun.team_number, newRun.detect, newRun.spin_carousel, newRun.alliance_park_auto, 
+            values: [[newRun.id, newRun.team, newRun.detect, newRun.spin_carousel, newRun.alliance_park_auto, 
                       newRun.warehouse_park_auto, newRun.deliver_alliance, newRun.deliver_shared, newRun.barrier, newRun.ducks, newRun.tse, 
                       newRun.alliance_park_end, newRun.warehouse_park_end, newRun.penalty_points, newRun.notes]]
         }
