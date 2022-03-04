@@ -5,7 +5,7 @@
         </head>
             <body>
             <h1 class = "MR.COD">MR.COD Website</h1>
-                <form action="/api/runs" method="POST">
+                <form action="/api/runs" method="POST" onsubmit="teamName()">
 
     
                     <h2>Team Information</h2>
@@ -20,11 +20,10 @@
                     <select name="matches" id="matches" onchange="change_myselect(this.value)">
                         <option value="select">Select</option>
                     </select>
-                    <select name="team_number" id="team_number" required="required" onchange="setName(this.value)"></select>
-                    <input type="hidden" name="team_name" id="team_name">
-                    <p id="test"></p>
+                    <select name="team" id="team" required="required" onchange="test(this.value)"></select>
 
                     <script>
+         
                         fetch('./api/schedule')
                            .then((res) => {
                               return res.text();
@@ -45,43 +44,19 @@
                               if(sel !== "select"){
                                  matches = JSON.parse(data);
                                  // document.getElementById('p1').innerHTML = sel;
-                                 document.getElementById('team_number').innerHTML = 
-                                    `<option value="${matches[parseInt(sel)].blue_1.number}">${matches[sel].blue_1.name} - ${matches[sel].blue_1.number}</option>` + 
-                                    `<option value="${matches[parseInt(sel)].blue_2.number}">${matches[sel].blue_2.name} - ${matches[sel].blue_2.number}</option>` +
-                                    `<option value="${matches[parseInt(sel)].red_1.number}">${matches[sel].red_1.name} - ${matches[sel].red_1.number}</option>` +
-                                    `<option value="${matches[parseInt(sel)].red_2.number}">${matches[sel].red_2.name} - ${matches[sel].red_2.number}</option>`;
+                                 document.getElementById('team').innerHTML = 
+                                    `<option value='{"name": "${matches[parseInt(sel)].blue_1.name}", "number": "${matches[parseInt(sel)].blue_1.number}"}'>${matches[sel].blue_1.name} - ${matches[sel].blue_1.number}</option>` + 
+                                    `<option value='{"name": "${matches[parseInt(sel)].blue_2.name}", "number": "${matches[parseInt(sel)].blue_2.number}"}'>${matches[sel].blue_2.name} - ${matches[sel].blue_2.number}</option>` +
+                                    `<option value='{"name": "${matches[parseInt(sel)].red_1.name}", "number": "${matches[parseInt(sel)].red_1.number}"}'>${matches[sel].red_1.name} - ${matches[sel].red_1.number}</option>` +
+                                    `<option value='{"name": "${matches[parseInt(sel)].red_2.name}", "number": "${matches[parseInt(sel)].red_2.number}"}'>${matches[sel].red_2.name} - ${matches[sel].red_2.number}</option>`;
                               } else {
                                  document.getElementById('team_number').innerHTML = "";
                               }
                            })
                         }
 
-                        function setName(sel) {
-                           fetch('./api/schedule')
-                           .then((res) => {
-                              return res.text();
-                           })
-                           .then((data) => {
-                              matches = JSON.parse(data);
-                              switch(document.getElementById('team_number').value){
-                                 case (matches[parseInt(sel)].blue_1.number):
-                                    document.getElementById('team_name').value = matches[parseInt(sel)].blue_1.name;
-                                    document.getElementById('test').innerHTML = document.getElementById('team_name').value;
-                                    break;
-                                 case (matches[parseInt(sel)].blue_2.number):
-                                    document.getElementById('team_name').value = matches[parseInt(sel)].blue_2.name;
-                                    document.getElementById('test').innerHTML = document.getElementById('team_name').value;
-                                    break;
-                                 case (matches[parseInt(sel)].blue_3.number):
-                                    document.getElementById('team_name').value = matches[parseInt(sel)].blue_3.name;
-                                    document.getElementById('test').innerHTML = document.getElementById('team_name').value;
-                                    break;
-                                 case (matches[parseInt(sel)].blue_4.number):
-                                    document.getElementById('team_name').value = matches[parseInt(sel)].blue_4.name;
-                                    document.getElementById('test').innerHTML = document.getElementById('team_name').value;
-                                    break;
-                              }
-                           })
+                        function test(sel) {
+                           console.log(sel);
                         }
                      </script>
 

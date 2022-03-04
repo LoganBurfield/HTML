@@ -41,10 +41,11 @@ router.get('/:id', (req, res) => {
 
 // Create Run
 router.post('/', async (req, res) => {
+    const team = JSON.parse(req.body.team);
     const newRun = {
         id: uuid.v4(),
-        team_name: req.body.team_name,
-        team_number: req.body.team_number,
+        team_name: team.name,
+        team_number: team.number,
         points: '0',
         detect: req.body.detect,
         alliance_park_auto: req.body.alliance_park_auto,
