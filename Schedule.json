@@ -1,0 +1,40 @@
+[
+   {
+      "match": 1,
+      "blue_1": {
+         "name": "thousand hamsters",
+         "number": "21"
+      },
+      "blue_2": {
+         "name": "cistermod",
+         "number": "423"
+      },
+      "red_1": {
+         "name": "legoats",
+         "number": "85"
+      },
+      "red_2": {
+         "name": "tubercraft",
+         "number": "921"
+      }
+   },
+   {
+      "match": 2,
+      "blue_1": {
+         "name": "mrcod",
+         "number": "2136"
+      },
+      "blue_2": {
+         "name": "milk",
+         "number": "74"
+      },
+      "red_1": {
+         "name": "fenix",
+         "number": "842"
+      },
+      "red_2": {
+         "name": "fenix phors",
+         "number": "963"
+      }
+   }
+]

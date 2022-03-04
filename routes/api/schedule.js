@@ -42,28 +42,37 @@ router.get('/:match', (req, res) => {
 
 // Create Match
 router.post('/', (req, res) => {
-    const newMatch = {
-        match: req.body.match,
-        blue_1: req.body.blue_1,
-        blue_2: req.body.blue_2,
-        red_1: req.body.red_1,
-        red_2: req.body.red_2,
-        field: req.body.field,
-        tourney_key: req.body.tourney_key
+    console.log(req.body);
+    console.log(eval(`req.body.blue1_name${1}`));
+    console.log("numMatches " + req.body.numMatches);
+    var matchSchedule = [];
+    console.log("numMatches " + req.body.numMatches);
+    for(let i=0; i < Number.parseInt(req.body.numMatches); i++){
+        console.log("numMatches " + req.body.numMatches);
+        matchSchedule[i] = {
+            match: i+1,
+            blue_1: {
+                name: eval(`req.body.blue1_name${i+1}`),
+                number: eval(`req.body.blue1_number${i+1}`)
+            },
+            blue_2: {
+                name: eval(`req.body.blue2_name${i+1}`),
+                number: eval(`req.body.blue2_number${i+1}`)
+            },
+            red_1: {
+                name: eval(`req.body.red1_name${i+1}`),
+                number: eval(`req.body.red1_number${i+1}`)
+            },
+            red_2: {
+                name: eval(`req.body.red2_name${i+1}`),
+                number: eval(`req.body.red2_number${i+1}`)
+            }
+        };
     }
+    console.log(req.body);
+    console.log(matchSchedule);
 
-    if(!newMatch.match) {
-        return res.status(400).json({ msg: 'Please fill out the entire form before submitting.' });
-    }
-    try {
-        const jsonString = fs.readFileSync ('./Schedule.json', 'utf-8');
-        schedule2 = JSON.parse(jsonString);
-    }   catch (err) {
-        console.log(err);
-    }
-    schedule2.push(newMatch)
-
-    fs.writeFile('./Schedule.json', JSON.stringify(schedule2, null, 2), err => {
+    fs.writeFileSync('./Schedule.json', JSON.stringify(matchSchedule, null, 3), err => {
         if (err) {
             console.log(err);
         } else {

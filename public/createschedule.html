@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Input Schedule</title>
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+   <style>
+      body {
+         margin: 30px 10%;
+      }
+      * {
+         font-family: 'Open Sans', sans-serif;
+      }
+
+      thead {
+         font-weight: bold;
+      }
+      tr {
+         margin: 5px;
+      }
+      input {
+         margin-left: 5px;
+         margin-right: 5px;
+         padding: 5px;
+         border: black 1px;
+         border-radius: 5px;
+         border-style: solid;
+      }
+      input:focus {
+         outline: none;
+         border-style: dashed !important;
+      }
+      .number {
+         width: 50px;
+      }
+
+      button {
+         margin: 30px 0;
+         padding: 10px 20px;
+         border: transparent;
+         border-radius: 5px;
+         background-color: red;
+         color: white;
+         font-weight: bold;
+         font-size: 15px;
+      }
+   </style>
+</head>
+<body>
+   <form action="/api/schedule" method="POST">
+      <!-- <ul id="matches" style="list-style: none;"></ul> -->
+
+      <h1>Create Schedule</h1>
+      <table>
+         <thead>
+            <tr>
+               <td>Match</td>
+               <td>Blue_1</td>
+               <td>Blue_2</td>
+               <td>Red_1</td>
+               <td>Red_2</td>
+            </tr>
+         </thead>
+         <tbody id="matches">
+            
+         </tbody>
+      </table>
+      <button type="button" id="add" value="0" onclick="addmatch(this.value)">Add Match</button>
+      <input type="hidden" name="numMatches" id="numMatches">
+      <button>Submit</button>
+
+      <script>
+         addmatch(0);
+         function addmatch(value){
+            document.getElementById("add").value = Number.parseInt(value) + 1;
+            numMatches = document.getElementById("add").value;
+            document.getElementById("matches").innerHTML += 
+               `<tr>
+               <td>Match #${numMatches}</td>
+               <td><input type="text" name="blue1_name${numMatches}" placeholder="Name"></input><input type="text" name="blue1_number${numMatches}" placeholder="Number" class="number"></input></td>
+               <td><input type="text" name="blue2_name${numMatches}" placeholder="Name"></input><input type="text" name="blue2_number${numMatches}" placeholder="Number" class="number"></input></td>
+               <td><input type="text" name="red1_name${numMatches}" placeholder="Name"></input><input type="text" name="red1_number${numMatches}" placeholder="Number" class="number"></input></td>
+               <td><input type="text" name="red2_name${numMatches}" placeholder="Name"></input><input type="text" name="red2_number${numMatches}" placeholder="Number" class="number"></input></td>
+               </tr>`;
+            
+            document.getElementById("numMatches").value = numMatches;
+            console.log(document.getElementById("numMatches").value);
+         }
+      </script>
+   </form>
+</body>
+</html>
