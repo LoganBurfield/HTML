@@ -64,35 +64,70 @@
                     <h2>Autonomous Mode</h2>
                     
 
-                    <p>Did they detect duck/TSE and dump in the correct area?</p>
-                    <input type="radio" name="detect" value="dumped_correctly" id="dumped_correctly">
-                    <label for="dumped_correctly">Dumped in Correct Area</label>
-                    <input type="radio" name="detect" value="dumped" id="dumped">
-                    <label for="dumped">Dumped</label>
-                    <input type="radio" name="detect" value="neither" id="neither" checked="true">
-                    <label for="neither">Neither</label>
+                    <label for="ground_auto">Cones placed onto ground junctions:</label>
+                    <select name="ground_auto" id="ground_auto" style="font-size: 18px;">
+                        <option value="N/A">N/A</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                      </select>
 
-                    <p>Did they spin the carousel?</p>
-                    <input type="radio" name="spin_carousel" value="yes" id="spun_carousel">
-                    <label for="spun_carousel">Yes</label>
-                    <input type="radio" name="spin_carousel" value="no" id="didnt_spin_carousel" checked="true">
-                    <label for="didnt_spin_carousel">No</label>
+                      <br></br>
 
-                    <p>Did they park in the alliance storage unit?</p>
-                    <input type="radio" name="alliance_park_auto" value="fully" id="3a">
-                    <label>Fully</label>
-                    <input type="radio" name="alliance_park_auto" value="partially" id="3b">
-                    <label>Partially</label>
-                    <input type="radio" name="alliance_park_auto" value="no" id="3c" checked="true">
-                    <label >No</label>
+                      <label for="low_auto">Cones placed onto low junctions:</label>
+                      <select name="low_auto" id="low_auto" style="font-size: 18px;">
+                          <option value="N/A">N/A</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                        </select>
+                        
+                        <br></br>
 
-                    <p>Did they park in the warehouse?</p>
-                    <input type="radio" name="warehouse_park_auto" value="fully" id="4a">
-                    <label>Fully</label>
-                    <input type="radio" name="warehouse_park_auto" value="partially" id="4b">
-                    <label>Partially</label>
-                    <input type="radio" name="warehouse_park_auto" value="no" id="4c" checked="true">
-                    <label >No</label>
+                        <label for="medium_auto">Cones placed onto medium junctions:</label>
+                        <select name="medium_auto" id="medium_auto" style="font-size: 18px;">
+                            <option value="N/A">N/A</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                          </select>
+
+                          <br></br>
+
+                          <label for="high_auto">Cones placed onto high junctions:</label>
+                          <select name="high_auto" id="high_auto" style="font-size: 18px;">
+                              <option value="N/A">N/A</option>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                            </select>
+
+                            <p>Parked in alliance substation or terminal?</p>
+                            <input type="radio" name="auto_park" value="yes" id="8a">
+                            <label>Yes</label>
+                            <input type="radio" name="auto_park" value="no" id="8b" checked="true">
+                            <label>No</label>
+
+                            <p>Parked in correct signal zone?</p>
+                            <input type="radio" name="auto_signal" value="yes" id="8a">
+                            <label>Yes</label>
+                            <input type="radio" name="auto_signal" value="no" id="8b" checked="true">
+                            <label>No</label>
+
+                            https://www.youtube.com/watch?v=FLyHblqbPnE (At 3:15: What does this exactly mean?)
 
 
                     <h2>Driver Controlled</h2>
