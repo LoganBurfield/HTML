@@ -47,19 +47,24 @@ router.post('/', async (req, res) => {
         team_name: team.name,
         team_number: team.number,
         points: '0',
-        detect: req.body.detect,
-        alliance_park_auto: req.body.alliance_park_auto,
-        warehouse_park_auto: req.body.warehouse_park_auto,
-        spin_carousel: req.body.spin_carousel,
-        deliver_alliance: req.body.alliance_top*6+req.body.alliance_middle*4+req.body.alliance_bottom*2,
-        deliver_shared: req.body.deliver_shared,
-        barrier: req.body.barrier,
-        ducks: req.body.ducks,
-        alliance_park_end: req.body.alliance_park_end,
-        warehouse_park_end: req.body.warehouse_park_end,
-        tse: req.body.tse,
+        ground_auto: req.body.ground_auto,
+        low_auto: req.body.low_auto,
+        medium_auto: req.body.medium_auto,
+        high_auto: req.body.high_auto,
+        auto_park: req.body.auto_park,
+        auto_signal: req.body.auto_signal,
+        cone_terminal: req.body.cone_terminal,
+        ground_driver: req.body.ground_driver,
+        low_driver: req.body.low_driver,
+        medium_driver: req.body.medium_driver,
+        high_driver: req.body.high_driver,
+        owned_junctions: req.body.owned_junctions,
+        endgame_park: req.body.endgame_park,
         penalty_points: req.body.penalties,
         notes: req.body.notes
+
+        // This is from last season, not sure what it is but it could be useful later for creating runs
+        // deliver_alliance: req.body.alliance_top*6+req.body.alliance_middle*4+req.body.alliance_bottom*2,
     }
 
     // if(!newRun.team_name || !newRun.team_number) {
@@ -114,9 +119,10 @@ router.post('/', async (req, res) => {
         range: "Sheet1!A:P",
         valueInputOption: "USER_ENTERED",
         resource: {
-            values: [[newRun.id, newRun.team_name, newRun.team_number, newRun.detect, newRun.spin_carousel, newRun.alliance_park_auto, 
-                      newRun.warehouse_park_auto, newRun.deliver_alliance, newRun.deliver_shared, newRun.barrier, newRun.ducks, newRun.tse, 
-                      newRun.alliance_park_end, newRun.warehouse_park_end, newRun.penalty_points, newRun.notes]]
+            values: [[newRun.id, newRun.team_name, newRun.team_number, newRun.points, newRun.ground_auto, newRun.low_auto, 
+                      newRun.medium_auto, newRun.high_auto, newRun.auto_park, newRun.auto_signal, newRun.cone_terminal,
+                      newRun.ground_driver, newRun.low_driver, newRun.medium_driver, newRun.high_driver, newRun.owned_junctions,
+                      newRun.endgame_park, newRun.penalty_points, newRun.notes]]
         }
     });
 
