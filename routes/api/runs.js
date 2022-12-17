@@ -112,7 +112,7 @@ router.post('/', async (req, res) => {
     //     range: "Sheet1",
     // });
 
-    // write row(s) to spreadsheet
+    // Write row(s) to spreadsheet
     await googleSheets.spreadsheets.values.append({
         auth,
         spreadsheetId,
