@@ -116,7 +116,8 @@ router.post('/', async (req, res) => {
     await googleSheets.spreadsheets.values.append({
         auth,
         spreadsheetId,
-        range: "Sheet1!A:P",
+    // Change the range whenever new values are added
+        range: "Sheet1!A:S",
         valueInputOption: "USER_ENTERED",
         resource: {
             values: [[newRun.id, newRun.team_name, newRun.team_number, newRun.points, newRun.ground_auto, newRun.low_auto, 
