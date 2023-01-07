@@ -41,10 +41,19 @@ img {
 .silly{
     margin: 0%;
     padding: 0%;
-    background-color: gray;
-    color: white;
-    font-size: 15px;
+    color: black;
+    font-size: 20px;
     
+}
+
+h2{
+    color: white;
+    margin: 0%;
+    padding: 0px;
+    text-align: center;
+    width: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
 }
 
 
