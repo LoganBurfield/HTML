@@ -2,39 +2,65 @@
    {
       "match": 1,
       "blue_1": {
-         "name": "thousand hamsters",
-         "number": "21"
+         "name": "d",
+         "number": ","
       },
       "blue_2": {
-         "name": "cistermod",
-         "number": "423"
+         "name": "asdffsdf,taes",
+         "number": ","
       },
       "red_1": {
-         "name": "legoats",
-         "number": "85"
+         "name": "gfdgsa,vasd",
+         "number": ","
       },
       "red_2": {
-         "name": "tubercraft",
-         "number": "921"
+         "name": "hbthsfd,dast",
+         "number": ","
       }
    },
    {
       "match": 2,
       "blue_1": {
-         "name": "mrcod",
-         "number": "2136"
+         "name": "f",
+         "number": ""
       },
       "blue_2": {
-         "name": "milk",
-         "number": "74"
+         "name": "gasdtae",
+         "number": ""
       },
       "red_1": {
-         "name": "fenix",
-         "number": "842"
+         "name": "astre",
+         "number": ""
       },
       "red_2": {
-         "name": "fenix phors",
-         "number": "963"
+         "name": "tase",
+         "number": ""
+      }
+   },
+   {
+      "match": 3,
+      "blue_1": {},
+      "blue_2": {},
+      "red_1": {},
+      "red_2": {}
+   },
+   {
+      "match": 4,
+      "blue_1": {
+         "name": "asF",
+         "number": ""
+      },
+      "blue_2": {
+         "name": "asf",
+         "number": ""
+      },
+      "red_1": {
+         "name": "sdag",
+         "number": ""
+      },
+      "red_2": {
+         "name": "gsad",
+         "number": ""
       }
    }
 ]

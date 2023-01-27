@@ -5,7 +5,7 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Input Schedule</title>
-
+   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -76,21 +76,37 @@
       <button>Submit</button>
 
       <script>
-         addmatch(0);
+         // $.getJSON('./api/schedule', function(data) {
+         //    console.log(data);
+         //    data.forEach((item, index) => {
+         //       document.getElementById("matches").insertAdjacentHTML( "beforeend",
+         //       `<tr>
+         //       <td>Match #${item.match}</td>
+         //       <td><input type="text" name="blue1_name${item.match}" value="${item.blue_1.name[0]}"></input><input type="text" name="blue1_number${item.match}" value="${item.blue_1.number}" class="number"></input></td>
+         //       <td><input type="text" name="blue2_name${item.match}" value="${item.blue_2.name}"></input><input type="text" name="blue2_number${item.match}" value="${item.blue_1.number}" class="number"></input></td>
+         //       <td><input type="text" name="red1_name${item.match}" value="${item.red_1.name}"></input><input type="text" name="red1_number${item.match}" value="${item.blue_1.number}" class="number"></input></td>
+         //       <td><input type="text" name="red2_name${item.match}" value="${item.red_2.name}"></input><input type="text" name="red2_number${item.match}" value="${item.blue_1.number}" class="number"></input></td>
+         //       </tr>`);
+         //       document.getElementById("add").value = item.match + 1;
+         //    });
+         // });
+
          function addmatch(value){
             document.getElementById("add").value = Number.parseInt(value) + 1;
             numMatches = document.getElementById("add").value;
-            document.getElementById("matches").innerHTML += 
+            document.getElementById("matches").insertAdjacentHTML( "beforeend",
                `<tr>
                <td>Match #${numMatches}</td>
                <td><input type="text" name="blue1_name${numMatches}" placeholder="Name"></input><input type="text" name="blue1_number${numMatches}" placeholder="Number" class="number"></input></td>
                <td><input type="text" name="blue2_name${numMatches}" placeholder="Name"></input><input type="text" name="blue2_number${numMatches}" placeholder="Number" class="number"></input></td>
                <td><input type="text" name="red1_name${numMatches}" placeholder="Name"></input><input type="text" name="red1_number${numMatches}" placeholder="Number" class="number"></input></td>
                <td><input type="text" name="red2_name${numMatches}" placeholder="Name"></input><input type="text" name="red2_number${numMatches}" placeholder="Number" class="number"></input></td>
-               </tr>`;
-            
+               </tr>`)
             document.getElementById("numMatches").value = numMatches;
             console.log(document.getElementById("numMatches").value);
+         }
+         function loadSchedule(){
+
          }
       </script>
    </form>
