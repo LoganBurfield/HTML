@@ -2,65 +2,362 @@
    {
       "match": 1,
       "blue_1": {
-         "name": "d",
-         "number": ","
+         "name": "1",
+         "number": "undefined"
       },
       "blue_2": {
-         "name": "asdffsdf,taes",
-         "number": ","
+         "name": "undefined",
+         "number": "undefined"
       },
       "red_1": {
-         "name": "gfdgsa,vasd",
-         "number": ","
+         "name": "undefined",
+         "number": "undefined"
       },
       "red_2": {
-         "name": "hbthsfd,dast",
-         "number": ","
+         "name": "undefined",
+         "number": "undefined"
       }
    },
    {
       "match": 2,
       "blue_1": {
-         "name": "f",
-         "number": ""
+         "name": "2",
+         "number": "undefined"
       },
       "blue_2": {
-         "name": "gasdtae",
-         "number": ""
+         "name": "undefined",
+         "number": "undefined"
       },
       "red_1": {
-         "name": "astre",
-         "number": ""
+         "name": "undefined",
+         "number": "undefined"
       },
       "red_2": {
-         "name": "tase",
-         "number": ""
+         "name": "undefined",
+         "number": "undefined"
       }
    },
    {
       "match": 3,
-      "blue_1": {},
-      "blue_2": {},
-      "red_1": {},
-      "red_2": {}
+      "blue_1": {
+         "name": "3",
+         "number": "undefined"
+      },
+      "blue_2": {
+         "name": "undefined",
+         "number": "undefined"
+      },
+      "red_1": {
+         "name": "undefined",
+         "number": "undefined"
+      },
+      "red_2": {
+         "name": "undefined",
+         "number": "undefined"
+      }
    },
    {
       "match": 4,
       "blue_1": {
-         "name": "asF",
+         "name": "4",
+         "number": "undefined"
+      },
+      "blue_2": {
+         "name": "undefined",
+         "number": "undefined"
+      },
+      "red_1": {
+         "name": "undefined",
+         "number": "undefined"
+      },
+      "red_2": {
+         "name": "undefined",
+         "number": "undefined"
+      }
+   },
+   {
+      "match": 5,
+      "blue_1": {
+         "name": "5",
+         "number": "undefined"
+      },
+      "blue_2": {
+         "name": "undefined",
+         "number": "undefined"
+      },
+      "red_1": {
+         "name": "undefined",
+         "number": "undefined"
+      },
+      "red_2": {
+         "name": "undefined",
+         "number": "undefined"
+      }
+   },
+   {
+      "match": 6,
+      "blue_1": {
+         "name": "6",
+         "number": "undefined"
+      },
+      "blue_2": {
+         "name": "undefined",
+         "number": "undefined"
+      },
+      "red_1": {
+         "name": "undefined",
+         "number": "undefined"
+      },
+      "red_2": {
+         "name": "undefined",
+         "number": "undefined"
+      }
+   },
+   {
+      "match": 7,
+      "blue_1": {
+         "name": "7",
+         "number": "undefined"
+      },
+      "blue_2": {
+         "name": "undefined",
+         "number": "undefined"
+      },
+      "red_1": {
+         "name": "undefined",
+         "number": "undefined"
+      },
+      "red_2": {
+         "name": "undefined",
+         "number": "undefined"
+      }
+   },
+   {
+      "match": 8,
+      "blue_1": {
+         "name": "8",
+         "number": "undefined"
+      },
+      "blue_2": {
+         "name": "undefined",
+         "number": "undefined"
+      },
+      "red_1": {
+         "name": "undefined",
+         "number": "undefined"
+      },
+      "red_2": {
+         "name": "undefined",
+         "number": "undefined"
+      }
+   },
+   {
+      "match": 9,
+      "blue_1": {
+         "name": "9",
+         "number": "undefined"
+      },
+      "blue_2": {
+         "name": "undefined",
+         "number": "undefined"
+      },
+      "red_1": {
+         "name": "undefined",
+         "number": "undefined"
+      },
+      "red_2": {
+         "name": "undefined",
+         "number": "undefined"
+      }
+   },
+   {
+      "match": 10,
+      "blue_1": {
+         "name": "10",
          "number": ""
       },
       "blue_2": {
-         "name": "asf",
+         "name": "undefined",
          "number": ""
       },
       "red_1": {
-         "name": "sdag",
+         "name": "undefined",
          "number": ""
       },
       "red_2": {
-         "name": "gsad",
+         "name": "undefined",
          "number": ""
+      }
+   },
+   {
+      "match": 11,
+      "blue_1": {
+         "name": "11",
+         "number": "undefined"
+      },
+      "blue_2": {
+         "name": "undefined",
+         "number": "undefined"
+      },
+      "red_1": {
+         "name": "undefined",
+         "number": "undefined"
+      },
+      "red_2": {
+         "name": "undefined",
+         "number": "undefined"
+      }
+   },
+   {
+      "match": 12,
+      "blue_1": {
+         "name": "12",
+         "number": "undefined"
+      },
+      "blue_2": {
+         "name": "undefined",
+         "number": "undefined"
+      },
+      "red_1": {
+         "name": "undefined",
+         "number": "undefined"
+      },
+      "red_2": {
+         "name": "undefined",
+         "number": "undefined"
+      }
+   },
+   {
+      "match": 13,
+      "blue_1": {
+         "name": "13",
+         "number": "undefined"
+      },
+      "blue_2": {
+         "name": "undefined",
+         "number": "undefined"
+      },
+      "red_1": {
+         "name": "undefined",
+         "number": "undefined"
+      },
+      "red_2": {
+         "name": "undefined",
+         "number": "undefined"
+      }
+   },
+   {
+      "match": 14,
+      "blue_1": {
+         "name": "14",
+         "number": "undefined"
+      },
+      "blue_2": {
+         "name": "undefined",
+         "number": "undefined"
+      },
+      "red_1": {
+         "name": "undefined",
+         "number": "undefined"
+      },
+      "red_2": {
+         "name": "undefined",
+         "number": "undefined"
+      }
+   },
+   {
+      "match": 15,
+      "blue_1": {
+         "name": "15",
+         "number": ""
+      },
+      "blue_2": {
+         "name": "",
+         "number": ""
+      },
+      "red_1": {
+         "name": "",
+         "number": ""
+      },
+      "red_2": {
+         "name": "",
+         "number": ""
+      }
+   },
+   {
+      "match": 16,
+      "blue_1": {
+         "name": "16",
+         "number": ""
+      },
+      "blue_2": {
+         "name": "",
+         "number": ""
+      },
+      "red_1": {
+         "name": "",
+         "number": ""
+      },
+      "red_2": {
+         "name": "",
+         "number": ""
+      }
+   },
+   {
+      "match": 17,
+      "blue_1": {
+         "name": "undefined",
+         "number": "undefined"
+      },
+      "blue_2": {
+         "name": "undefined",
+         "number": "undefined"
+      },
+      "red_1": {
+         "name": "undefined",
+         "number": "undefined"
+      },
+      "red_2": {
+         "name": "undefined",
+         "number": "undefined"
+      }
+   },
+   {
+      "match": 18,
+      "blue_1": {
+         "name": "undefined",
+         "number": "undefined"
+      },
+      "blue_2": {
+         "name": "undefined",
+         "number": "undefined"
+      },
+      "red_1": {
+         "name": "undefined",
+         "number": "undefined"
+      },
+      "red_2": {
+         "name": "undefined",
+         "number": "undefined"
+      }
+   },
+   {
+      "match": 19,
+      "blue_1": {
+         "name": "undefined",
+         "number": "undefined"
+      },
+      "blue_2": {
+         "name": "undefined",
+         "number": "undefined"
+      },
+      "red_1": {
+         "name": "undefined",
+         "number": "undefined"
+      },
+      "red_2": {
+         "name": "undefined",
+         "number": "undefined"
       }
    }
 ]

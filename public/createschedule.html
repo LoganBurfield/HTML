@@ -39,7 +39,7 @@
       .number {
          width: 50px;
       }
-
+      
       button {
          margin: 30px 0;
          padding: 10px 20px;
@@ -49,6 +49,13 @@
          color: white;
          font-weight: bold;
          font-size: 15px;
+      }
+      button.remove{
+         margin-top: 5px;
+         margin-bottom: 5px;
+         margin-left: 5px;
+         margin-right: 5px;
+         padding: 5px;
       }
    </style>
 </head>
@@ -62,8 +69,11 @@
             <tr>
                <td>Match</td>
                <td>Blue_1</td>
+               <td></td>
                <td>Blue_2</td>
+               <td></td>
                <td>Red_1</td>
+               <td></td>
                <td>Red_2</td>
             </tr>
          </thead>
@@ -71,41 +81,57 @@
             
          </tbody>
       </table>
-      <button type="button" id="add" value="0" onclick="addmatch(this.value)">Add Match</button>
+      <button type="button" id="add" value="0" onclick="addmatch()">Add Match</button>
       <input type="hidden" name="numMatches" id="numMatches">
       <button>Submit</button>
 
       <script>
-         // $.getJSON('./api/schedule', function(data) {
-         //    console.log(data);
-         //    data.forEach((item, index) => {
-         //       document.getElementById("matches").insertAdjacentHTML( "beforeend",
-         //       `<tr>
-         //       <td>Match #${item.match}</td>
-         //       <td><input type="text" name="blue1_name${item.match}" value="${item.blue_1.name[0]}"></input><input type="text" name="blue1_number${item.match}" value="${item.blue_1.number}" class="number"></input></td>
-         //       <td><input type="text" name="blue2_name${item.match}" value="${item.blue_2.name}"></input><input type="text" name="blue2_number${item.match}" value="${item.blue_1.number}" class="number"></input></td>
-         //       <td><input type="text" name="red1_name${item.match}" value="${item.red_1.name}"></input><input type="text" name="red1_number${item.match}" value="${item.blue_1.number}" class="number"></input></td>
-         //       <td><input type="text" name="red2_name${item.match}" value="${item.red_2.name}"></input><input type="text" name="red2_number${item.match}" value="${item.blue_1.number}" class="number"></input></td>
-         //       </tr>`);
-         //       document.getElementById("add").value = item.match + 1;
-         //    });
-         // });
+         $.getJSON('./api/schedule', function(data) {
+            console.log(data);
+            var index;
+            data.forEach((item) => {
+               document.getElementById("add").value++;
+               document.getElementById("numMatches").value = document.getElementById("add").value;
+               index = document.getElementById("add").value;
+               document.getElementById("matches").insertAdjacentHTML( "beforeend",
+               `<tr>
+               <td>Match #${index}</td>
+               <td><input type="text" name="blue1_name${index}" value="${item.blue_1.name}"></input></td>
+               <td><input type="text" name="blue1_number${index}" value="${item.blue_1.number}" class="number"></input></td>
+               <td><input type="text" name="blue2_name${index}" value="${item.blue_2.name}"></input></td>
+               <td><input type="text" name="blue2_number${index}" value="${item.blue_1.number}" class="number"></input></td>
+               <td><input type="text" name="red1_name${index}" value="${item.red_1.name}"></input></td>
+               <td><input type="text" name="red1_number${index}" value="${item.blue_1.number}" class="number"></input></td>
+               <td><input type="text" name="red2_name${index}" value="${item.red_2.name}"></input></td>
+               <td><input type="text" name="red2_number${index}" value="${item.blue_1.number}" class="number"></input></td>
+               <td><button type="button" class="remove" value="${index}" onclick="RemoveMatch()">Remove</button></td>
+               </tr>`);
+               console.log(item);
+            });
+            console.log(document.getElementById("add").value);
+            console.log(document.getElementById("numMatches").value)
+         });
 
-         function addmatch(value){
-            document.getElementById("add").value = Number.parseInt(value) + 1;
+         function addmatch(){
+            document.getElementById("add").value++;
             numMatches = document.getElementById("add").value;
             document.getElementById("matches").insertAdjacentHTML( "beforeend",
                `<tr>
                <td>Match #${numMatches}</td>
-               <td><input type="text" name="blue1_name${numMatches}" placeholder="Name"></input><input type="text" name="blue1_number${numMatches}" placeholder="Number" class="number"></input></td>
-               <td><input type="text" name="blue2_name${numMatches}" placeholder="Name"></input><input type="text" name="blue2_number${numMatches}" placeholder="Number" class="number"></input></td>
-               <td><input type="text" name="red1_name${numMatches}" placeholder="Name"></input><input type="text" name="red1_number${numMatches}" placeholder="Number" class="number"></input></td>
-               <td><input type="text" name="red2_name${numMatches}" placeholder="Name"></input><input type="text" name="red2_number${numMatches}" placeholder="Number" class="number"></input></td>
+               <td><input type="text" name="blue1_name${numMatches}" placeholder="Name"></input></td>
+               <td><input type="text" name="blue1_number${numMatches}" placeholder="Number" class="number"></input></td>
+               <td><input type="text" name="blue2_name${numMatches}" placeholder="Name"></input></td>
+               <td><input type="text" name="blue2_number${numMatches}" placeholder="Number" class="number"></input></td>
+               <td><input type="text" name="red1_name${numMatches}" placeholder="Name"></input></td>
+               <td><input type="text" name="red1_number${numMatches}" placeholder="Number" class="number"></input></td>
+               <td><input type="text" name="red2_name${numMatches}" placeholder="Name"></input></td>
+               <td><input type="text" name="red2_number${numMatches}" placeholder="Number" class="number"></input></td>
+               <td><button type="button" class="remove" value="${numMatches}" onclick="RemoveMatch()">Remove</button></td>
                </tr>`)
             document.getElementById("numMatches").value = numMatches;
             console.log(document.getElementById("numMatches").value);
          }
-         function loadSchedule(){
+         function RemoveMatch(){
 
          }
       </script>
