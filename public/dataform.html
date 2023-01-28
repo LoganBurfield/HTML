@@ -1,7 +1,7 @@
 <!DOCTYPE html>
     <html>
         <head>
-        <link rel= "StyleSheet">
+        <link rel= "StyleSheet" href="css/dataform.css">
         </head>
             <body>
                 <form action="/api/runs" method="POST">
@@ -120,21 +120,21 @@
                               <option value="2">2</option>
                               <option value="3">3</option>
                               <option value="4">4</option>
-                            </select>
-
-                            <p>Parked in alliance substation or terminal?</p>
-                            <input type="radio" name="auto_park" value="yes" id="auto_park_1">
-                            <label>Yes</label>
-                            <input type="radio" name="auto_park" value="no" id="auto_park_2" checked="true">
-                            <label>No</label>
-
-                            <p>Parked in correct signal zone?</p>
-                            <input type="radio" name="auto_signal" value="yes_with_custom_sleeve" id="auto_signal_1">
-                            <label>Yes, with custom sleeve</label>
-                            <input type="radio" name="auto_signal" value="yes_with_default_sleeve" id="8a">
-                            <label>Yes, with default sleeve</label>
-                            <input type="radio" name="auto_signal" value="no" id="8b" checked="true">
-                            <label>No</label>
+                           </select>
+                           <br></br>
+                           <label for="auto_park">Parked in alliance substation or terminal?</label>
+                           <input type="radio" name="auto_park" value="yes" id="auto_park_1">
+                           <label>Yes</label>
+                           <input type="radio" name="auto_park" value="no" id="auto_park_2" checked="true">
+                           <label>No</label>
+                            
+                           <p>Parked in correct signal zone? ⬇</p>
+                           <input type="radio" name="auto_signal" value="yes_with_custom_sleeve" id="auto_signal_1">
+                           <label>Yes, with custom sleeve</label>
+                           <input type="radio" name="auto_signal" value="yes_with_default_sleeve" id="8a">
+                           <label>Yes, with default sleeve</label>
+                           <input type="radio" name="auto_signal" value="no" id="8b" checked="true">
+                           <label>No</label>
 
 
                     <h2>Driver Controlled</h2>
@@ -236,14 +236,14 @@
 
                     <h2 style="margin-bottom: 0px;">Penalty Points</h2>
                     <p></p>
-                    <input type="number" name="penalties" value="0" min="0" max="120" style="font-size: 20px;"/>
+                    <input type="number" id="penalties" name="penalties" value="0" min="0" max="120" style="font-size: 20px;"/>
                     <p></p>
 
                     <h2>Notes</h2>
-                    <textarea rows="9" cols="50" name="notes" id=""></textarea>
+                    <textarea rows="9" cols="50" name="notes" id="notes"></textarea>
 
                     <p></p>
-                    <input type="submit" value="Submit Run">
+                    <input type="submit" id="submit" value="Submit Run">
 
                 </form>
                 <br>
