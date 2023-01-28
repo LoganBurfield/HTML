@@ -1,0 +1,80 @@
+<p id="demo"></p>
+
+<h1>{{title}}</h1>
+<h4>This is the schedule tool.</h4>
+<ul class="list-group">
+    {{#each match}}
+    <li class="list-group-item"> Match {{this.match}}: {{this.blue_1}}</li>
+    {{/each}}
+</ul>
+
+<select id="selectmatch">
+    {{#each match}}
+    <option value="{{this.match}}: {{this.blue_1}}">Match {{this.match}}: {{this.blue_1}}</option>
+    {{/each}}
+</select>
+
+
+<br></br>
+
+
+<select class="s1" id="s1" onchange="insertOptions('s1', 's2')">
+    <option value="Select">Select</option>
+    {{#each match}}
+    <option value="{{this.match}}">Match {{this.match}}</option>
+    {{/each}}
+</select>
+<select class="s2" id="s2">
+    <option value="--">--</option>
+</select>
+
+<script type="text/javascript">
+
+const xmlhttp = new XMLHttpRequest();
+xmlhttp.onload = function() {
+  const myObj = JSON.parse(this.responseText);
+  document.getElementById("demo").innerHTML = myObj;
+}
+xmlhttp.open("GET", "./api/schedule");
+xmlhttp.send();
+
+
+function removeAll(s2) {
+    for (var i = s2.options.length - 1; i >= 0; i--) {
+        s2.remove(i);
+    }
+}
+function insertOptions(s1,s2) {
+    var s1 = document.getElementById('s1');
+    var s2 = document.getElementById('s2');
+    if(s1.options[s1.selectedIndex].value == "1") {
+      var opt1 = document.createElement('option');
+      var opt2 = document.createElement('option');
+      opt1.value = "HP";
+      opt2.value = "Dell";
+      opt1.innerHTML = "HP";
+      opt2.innerHTML = "Dell";
+      removeAll(s2);
+      s2.options.add(opt1);
+      s2.options.add(opt2);
+    }
+    else if(s1.options[s1.selectedIndex].value == "2") {
+      var opt1 = document.createElement('option');
+      var opt2 = document.createElement('option');
+      opt1.value = "Redmi";
+      opt2.value = "Samsung";
+      opt1.innerHTML = "Redmi";
+      opt2.innerHTML = "Samsung";
+      removeAll(s2);
+      s2.options.add(opt1);
+      s2.options.add(opt2);
+    }
+    else {
+      var opt1 = document.createElement('option');
+      opt1.value = "--";
+      opt1.innerHTML = "--";
+      removeAll(s2);
+      s2.options.add(opt1);
+    }
+}
+</script>
