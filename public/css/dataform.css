@@ -1,17 +1,17 @@
 @media only screen and (max-width: 600px) {
    body {
-      font-size: 35px;
+      font-size: 18px;
    }
    h2 {
-      margin-left: 35%;
-      margin-right: 35%;
-      width: 30%;
+      margin-left: 10%;
+      margin-right: 10%;
+      width: 80%;
       text-align: center;
       font-size: 35px;
       color: cadetblue;
    }
    p {
-      font-size: 32px;
+      font-size: 25;
    }
    #matches {
       margin: 5px;
@@ -46,9 +46,9 @@
       border: 5px, solid, black;
    }
    #submit {
-      margin-left: 42.5%;
-      margin-right: 42.5%;
-      width: 15%;
+      margin-left: 30%;
+      margin-right: 30%;
+      width: 40%;
       padding-top: 10px;
       padding-bottom: 10px;
       background-color: lightskyblue;
