@@ -1,10 +1,9 @@
 <!DOCTYPE html>
     <html>
         <head>
-        <link rel= "StyleSheet" href="css/style.css">
+        <link rel= "StyleSheet">
         </head>
             <body>
-            <h1 class = "MR.COD">MR.COD Website</h1>
                 <form action="/api/runs" method="POST">
 
     
@@ -64,6 +63,14 @@
                     <h2>Autonomous Mode</h2>
                     
 
+                    <label for="immediate_stack">Did they immediately go for the cone stack?</label>
+                    <input type="radio" name="immediate_stack" value="yes" id="immediate_stack_1">
+                    <label>Yes</label>
+                    <input type="radio" name="immediate_stack" value="no" id="immediate_stack_2" checked="true">
+                    <label>No</label>
+
+                    <br></br>
+
                     <label for="ground_auto">Cones placed onto ground junctions:</label>
                     <select name="ground_auto" id="ground_auto" style="font-size: 18px;">
                         <option value="N/A">N/A</option>
@@ -120,14 +127,13 @@
                             <label>Yes</label>
                             <input type="radio" name="auto_park" value="no" id="auto_park_2" checked="true">
                             <label>No</label>
-                            
 
                             <p>Parked in correct signal zone?</p>
-                            <input type="radio" name="auto_signal" value="yes" id="auto_signal_1">
+                            <input type="radio" name="auto_signal" value="yes_with_custom_sleeve" id="auto_signal_1">
                             <label>Yes, with custom sleeve</label>
-                            <input type="radio" name="auto_signal" value="auto_signal_2" id="8a">
+                            <input type="radio" name="auto_signal" value="yes_with_default_sleeve" id="8a">
                             <label>Yes, with default sleeve</label>
-                            <input type="radio" name="auto_signal" value="auto_signal_3" id="8b" checked="true">
+                            <input type="radio" name="auto_signal" value="no" id="8b" checked="true">
                             <label>No</label>
 
 
@@ -206,6 +212,14 @@
                               <h2>Endgame</h2>
           
           
+                              <label for="ownership">Did the team go for ownership?</label>
+                              <input type="radio" name="ownership" value="yes" id="ownership_1">
+                              <label>Yes</label>
+                              <input type="radio" name="ownership" value="no" id="ownership_2" checked="true">
+                              <label>No</label>
+
+                              <br></br>
+                              
                               <label for="owned_junctions">Did the team end with a circuit?</label>
                                  <input type="radio" name="owned_junctions" value="yes" id="owned_junctions_1">
                                  <label>Yes</label>

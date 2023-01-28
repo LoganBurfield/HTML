@@ -47,6 +47,7 @@ router.post('/', async (req, res) => {
         team_name: team.name,
         team_number: team.number,
         points: '0',
+        immediate_stack: req.body.immediate_stack,
         ground_auto: req.body.ground_auto,
         low_auto: req.body.low_auto,
         medium_auto: req.body.medium_auto,
@@ -58,6 +59,7 @@ router.post('/', async (req, res) => {
         low_driver: req.body.low_driver,
         medium_driver: req.body.medium_driver,
         high_driver: req.body.high_driver,
+        ownership: req.body.ownership,
         owned_junctions: req.body.owned_junctions,
         endgame_park: req.body.endgame_park,
         penalty_points: req.body.penalties,
@@ -117,13 +119,13 @@ router.post('/', async (req, res) => {
         auth,
         spreadsheetId,
     // Change the range whenever new values are added
-        range: "Sheet1!A:S",
+        range: "Sheet1!A:U",
         valueInputOption: "USER_ENTERED",
         resource: {
-            values: [[newRun.id, newRun.team_name, newRun.team_number, newRun.points, newRun.ground_auto, newRun.low_auto, 
-                      newRun.medium_auto, newRun.high_auto, newRun.auto_park, newRun.auto_signal, newRun.cone_terminal,
-                      newRun.ground_driver, newRun.low_driver, newRun.medium_driver, newRun.high_driver, newRun.owned_junctions,
-                      newRun.endgame_park, newRun.penalty_points, newRun.notes]]
+            values: [[newRun.id, newRun.team_name, newRun.team_number, newRun.points, newRun.immediate_stack, newRun.ground_auto,
+                      newRun.low_auto,  newRun.medium_auto, newRun.high_auto, newRun.auto_park, newRun.auto_signal, newRun.cone_terminal,
+                      newRun.ground_driver, newRun.low_driver, newRun.medium_driver, newRun.high_driver, newRun.ownership,
+                      newRun.owned_junctions, newRun.endgame_park, newRun.penalty_points, newRun.notes]]
         }
     });
 
