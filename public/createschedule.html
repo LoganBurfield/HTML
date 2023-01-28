@@ -82,10 +82,28 @@
          </tbody>
       </table>
       <button type="button" id="add" value="0" onclick="addmatch()">Add Match</button>
+      <button type="button" onclick="RemoveAll()">remove all</button>
       <input type="hidden" name="numMatches" id="numMatches">
       <button>Submit</button>
 
       <script>
+         function RemoveAll(){
+            document.getElementById("add").value = 1;
+            document.getElementById("numMatches").value = 1;
+            document.getElementById("matches").innerHTML = 
+               `<tr>
+               <td>Match #${1}</td>
+               <td><input type="text" name="blue1_name${numMatches}" placeholder="Name"></input></td>
+               <td><input type="text" name="blue1_number${numMatches}" placeholder="Number" class="number"></input></td>
+               <td><input type="text" name="blue2_name${numMatches}" placeholder="Name"></input></td>
+               <td><input type="text" name="blue2_number${numMatches}" placeholder="Number" class="number"></input></td>
+               <td><input type="text" name="red1_name${numMatches}" placeholder="Name"></input></td>
+               <td><input type="text" name="red1_number${numMatches}" placeholder="Number" class="number"></input></td>
+               <td><input type="text" name="red2_name${numMatches}" placeholder="Name"></input></td>
+               <td><input type="text" name="red2_number${numMatches}" placeholder="Number" class="number"></input></td>
+               <td><button type="button" class="remove" value="${numMatches}" onclick="RemoveMatch()">Remove</button></td>
+               </tr>`;
+         }
          $.getJSON('./api/schedule', function(data) {
             console.log(data);
             var index;
@@ -134,6 +152,7 @@
          function RemoveMatch(){
 
          }
+         
       </script>
    </form>
 </body>
