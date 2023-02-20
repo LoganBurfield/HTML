@@ -33,6 +33,6 @@ app.use(express.static(path.join(__dirname, '/public')));
 app.use('/api/runs', require('./routes/api/runs'));
 app.use('/api/schedule', require('./routes/api/schedule'));
 
-const PORT = process.env.PORT || 5005;
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
