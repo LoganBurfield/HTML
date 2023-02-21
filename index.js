@@ -36,3 +36,14 @@ app.use('/api/schedule', require('./routes/api/schedule'));
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
+
+
+
+// FTC API Testing
+
+fetch('http://ftc-api.firstinspires.org', {
+   headers: {
+      'Authorization': 'Basic Y29kMTcyMzU6NEQxQjEyNzUtQkJFQi00NEI3LTlFRjgtRkE1MzczMDQxMTk3'
+   }})
+.then(response => response.text())
+.then(text => console.log(text))
