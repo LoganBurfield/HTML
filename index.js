@@ -45,5 +45,17 @@ fetch('http://ftc-api.firstinspires.org', {
    headers: {
       'Authorization': 'Basic Y29kMTcyMzU6NEQxQjEyNzUtQkJFQi00NEI3LTlFRjgtRkE1MzczMDQxMTk3'
    }})
-.then(response => response.text())
-.then(text => console.log(text))
+   .then(function (response) {
+      return response.json();
+   }).then(function (obj) {
+      console.log(obj);
+   }).catch(function (error) {
+      console.error('Something went wrong with retrieving the data.');
+      console.error(error);
+   })
+
+
+// .then(response => response.text())
+// .then(text => console.log(text))
+
+
